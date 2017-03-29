@@ -1,6 +1,5 @@
 [chkWindows]
 172.27.189.101
-172.27.255.61
 
 [all:vars]
 ansible_user=tckk_adm
