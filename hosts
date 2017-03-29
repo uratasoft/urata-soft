@@ -2,8 +2,8 @@
 172.27.189.101
 
 [all:vars]
-ansible_user=tckk_adm
-ansible_password=Admin123ckk!
+ansible_user=ckk
+ansible_password=Admin
 ansible_port=5986
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
