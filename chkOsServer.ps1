@@ -2,8 +2,6 @@
 #!powershell
 # SCRIPT NAME: chkOsServer.ps1
 # PURPOSE: To check the Server and OS
-# AUTHOR: NetOne T.Urata
-# WRITTEN DATE: 2017/02/22
 # WANT_JSON
 # POWERSHELL_COMMON
 ################################################################
