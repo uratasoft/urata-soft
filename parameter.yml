@@ -1,9 +1,4 @@
 ---
-CHK_NET:
-  - { INF_ALIAS: 'Kanri_60', IP_ADDRESS: '172.27.189.101' }
-
-CHK_HOST:
-  - { GROUP_NAME: 'Administrators',LOCAL_USER: 'tckk_adm' ,HOST_NAME: 'TCK2EJO2-VVMG01:tck2ejo2-vvmg41' }
 
 CHK_FIRE_WALL:
   - { DOMAIN: 'True', PRIVATE: 'False',PUBLIC: 'False' }
@@ -24,16 +19,8 @@ CHK_SERVICE:
   - { SERVICE: 'vspherewebclientsvc', STATE: 'Running', MODE: 'Auto' }
   - { SERVICE: 'ADAM_VMwareVCMSDS', STATE: 'Running', MODE: 'Auto' }
 
-CHK_GPO:
-  - { PNAME: 'SEPM-Policy',DOMA: 'TCK2VME1.local'}
-  - { PNAME: 'Default Domain Policy',DOMA: 'TCK2VME1.local'}
-
-CHK_AD:
-  - { ANAME: 'kccs_adm' }
-  - { ANAME: 'tckk_adm' }
-
 CHK_VM:
-  - { CPU: '8',MEMORY: '64', DISK: '100', FILE: '[tck2ejo2-pmbhpv014Boot01] tck2ejo2-vvmg01/tck2ejo2-vvmg01.vmdk', NETTYPE: 'Vmxnet3', NETNAME: 'PG_Kanri_60', MAC: '00:0c:29:06:92:81' }
+  - { CPU: '8',MEMORY: '64', DISK: '100', FILE: '[pmbhpv014Boot01] 2ejo2-.vmdk', NETTYPE: 'Vmxnet3', NETNAME: 'PG_60', MAC: '00:0c:29:06:92:81' }
 
 CHK_VCENTER:
   - { KEY: 'ads.timeout,60'}
@@ -41,9 +28,9 @@ CHK_VCENTER:
   - { KEY: 'ads.maxFetch,5000'}
   - { KEY: 'client.timeout.normal,30'}
   - { KEY: 'client.timeout.long,120'}
-  - { KEY: 'VirtualCenter.FQDN,tck2ejo2-vvmg01.tck2vme1.local'}
-  - { KEY: 'VirtualCenter.InstanceName,tck2ejo2-vvmg01.tck2vme1.local'}
-  - { KEY: 'VirtualCenter.ManagedIP,172.27.189.101'}
+  - { KEY: 'VirtualCenter.FQDN,jo2-mg01.tck2vme1.local'}
+  - { KEY: 'VirtualCenter.InstanceName,g01.tck2vme1.local'}
+  - { KEY: 'VirtualCenter.ManagedIP,12.27.189.101'}
   - { KEY: 'VirtualCenter.MaxDBConnection,50'}
   - { KEY: 'WebService.Ports.http,80'}
   - { KEY: 'WebService.Ports.https,443'}
