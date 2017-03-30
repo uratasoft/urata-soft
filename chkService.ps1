@@ -2,8 +2,6 @@
 #!powershell
 # SCRIPT NAME: chkService.ps1
 # PURPOSE: To check the Windows Service status
-# AUTHOR: NetOne T.Urata
-# WRITTEN DATE: 2017/02/22
 # WANT_JSON
 # POWERSHELL_COMMON
 ################################################################
