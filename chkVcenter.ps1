@@ -2,8 +2,6 @@
 #!powershell
 # SCRIPT NAME: chkVcenter.ps1
 # PURPOSE: To check vCenter setting
-# AUTHOR: NetOne T.Urata
-# WRITTEN DATE: 2017/02/22
 # WANT_JSON
 # POWERSHELL_COMMON
 ################################################################
