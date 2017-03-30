@@ -2,8 +2,6 @@
 #!powershell
 # SCRIPT NAME: chkNetWork.ps1
 # PURPOSE: To check the network setting
-# AUTHOR: NetOne T.Urata
-# WRITTEN DATE: 2017/02/22
 # WANT_JSON
 # POWERSHELL_COMMON
 ################################################################
