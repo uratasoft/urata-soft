@@ -2,8 +2,6 @@
 #!powershell
 # SCRIPT NAME: chkRegistory.ps1
 # PURPOSE: To set the Registory Entory
-# AUTHOR: NetOne T.Urata
-# WRITTEN DATE: 2017/02/22
 # WANT_JSON
 # POWERSHELL_COMMON
 ################################################################
