@@ -2,8 +2,7 @@
 #  SOURCE NAME: chkWindows.yml                       #
 #  SOURCE TYPE: YAML FOR ANSIBLE                     #
 #  PURPOSE: TO CHECK THE PREFERENCE                  #
-#  AUTHOR:      NETONE T.URATA                       #
-#  WRITEN DAY:  2017/02/01                           #
+#
 #  REMARKS:                                          #
 #  CONSTRUCTION:                                     #
 #     hosts                                          #
