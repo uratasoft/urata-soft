@@ -1,0 +1,10 @@
+---
+ - chkRegistory:
+    RES_OK="{{ RES_OK }}"
+    RES_NG="{{ RES_NG }}"
+    NO_ARG="{{ NO_ARG }}"
+    RKEY="{{ item.RKEY }}"
+    RENTORY="{{ item.RENTORY }}"
+    RVAL="{{ item.RVAL }}"
+   with_items:
+     - "{{ CHK_REG }}"
