@@ -1,0 +1,12 @@
+Add-PSSnapin VMware.VimAutomation.Core -ErrorAction Stop
+
+connect-viserver -server vChoge -user hoge -Password hage
+
+get-vm -name VMhoge | export-vapp -Destination C:\Users -Format Ova
+
+Import-VApp -Source C:\Users\VMhoge.ova 
+   -Name newVM 
+   -VMHost vmHost 
+   -Datastore storage-01
+   -DiskStorageFormat Thin
+ 
