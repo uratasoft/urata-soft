@@ -1,9 +1,0 @@
-[chkWindows]
-172.27.189.101
-
-[all:vars]
-ansible_user=ckk
-ansible_password=Admin
-ansible_port=5986
-ansible_connection=winrm
-ansible_winrm_server_cert_validation=ignore
