@@ -1,6 +1,7 @@
 import pandas as pd
 # 正規表現を扱うためのライブラリ
 import re
+#aaaa
 
 def remove_newlines(text):
     """
