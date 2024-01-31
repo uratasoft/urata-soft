@@ -1,1 +1,0 @@
-# urata-soft
