@@ -1,0 +1,10 @@
+---
+ - chkService:
+    RES_OK="{{ RES_OK }}"
+    RES_NG="{{ RES_NG }}"
+    NO_ARG="{{ NO_ARG }}"
+    SERVICE="{{ item.SERVICE }}"
+    STATE="{{ item.STATE }}"
+    MODE="{{ item.MODE }}"
+   with_items:
+     - "{{ CHK_SERVICE }}"

@@ -1,0 +1,9 @@
+---
+ - chkNetWork:
+    RES_OK="{{ RES_OK }}"
+    RES_NG="{{ RES_NG }}"
+    NO_ARG="{{ NO_ARG }}"
+    INF_ALIAS="{{ item.INF_ALIAS }}"
+    IP_ADDRESS="{{ item.IP_ADDRESS }}"
+   with_items:
+     - "{{ CHK_NET }}"
