@@ -1,0 +1,440 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "openai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openai",
+        "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "get_embedding",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "answer_question",
+        "importPath": "search",
+        "description": "search",
+        "isExtraImport": true,
+        "detail": "search",
+        "documentation": {}
+    },
+    {
+        "label": "tweepy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tweepy",
+        "description": "tweepy",
+        "detail": "tweepy",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "distances_from_embeddings",
+        "importPath": "openai.embeddings_utils",
+        "description": "openai.embeddings_utils",
+        "isExtraImport": true,
+        "detail": "openai.embeddings_utils",
+        "documentation": {}
+    },
+    {
+        "label": "tiktoken",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tiktoken",
+        "description": "tiktoken",
+        "detail": "tiktoken",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "gpt_twitter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gpt_twitter",
+        "description": "gpt_twitter",
+        "detail": "gpt_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "bot_twitter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "openai.api_key",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "openai.api_key = os.environ[\"OPENAI_API_KEY\"]\n# 最初にメッセージを表示する\nprint(\"質問を入力してください\")\nconversation_history = []\nwhile True:\n    # ユーザーの入力した文字を変数「user_input」に格納\n    user_input = input()\n    # ユーザーの入力した文字が「exit」の場合はループを抜ける\n    if user_input == \"exit\":\n        break",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "conversation_history",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "conversation_history = []\nwhile True:\n    # ユーザーの入力した文字を変数「user_input」に格納\n    user_input = input()\n    # ユーザーの入力した文字が「exit」の場合はループを抜ける\n    if user_input == \"exit\":\n        break\n    conversation_history.append({\"role\": \"user\", \"content\": user_input})\n    answer = answer_question(user_input, conversation_history)\n    print(\"ChatGPT:\", answer)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "post",
+        "kind": 2,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "peekOfCode": "def post(tweet):\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,\n        consumerSecret,\n        accessToken,\n        accessTokenSecret\n    )\n    client.create_tweet(text=tweet)",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "consumerKey",
+        "kind": 5,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "peekOfCode": "consumerKey = os.environ[\"TWITTER_CONSUMER_KEY\"]\nconsumerSecret = os.environ[\"TWITTER_CONSUMER_SECRET\"]\naccessToken = os.environ[\"TWITTER_ACCESS_TOKEN\"]\naccessTokenSecret = os.environ[\"TWITTER_ACCESS_TOKEN_SECRET\"]\nbearerToken = os.environ[\"TWITTER_BEARER_TOKEN\"]\n# ツイート作成関数\ndef post(tweet):\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "consumerSecret",
+        "kind": 5,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "peekOfCode": "consumerSecret = os.environ[\"TWITTER_CONSUMER_SECRET\"]\naccessToken = os.environ[\"TWITTER_ACCESS_TOKEN\"]\naccessTokenSecret = os.environ[\"TWITTER_ACCESS_TOKEN_SECRET\"]\nbearerToken = os.environ[\"TWITTER_BEARER_TOKEN\"]\n# ツイート作成関数\ndef post(tweet):\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,\n        consumerSecret,",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "accessToken",
+        "kind": 5,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "peekOfCode": "accessToken = os.environ[\"TWITTER_ACCESS_TOKEN\"]\naccessTokenSecret = os.environ[\"TWITTER_ACCESS_TOKEN_SECRET\"]\nbearerToken = os.environ[\"TWITTER_BEARER_TOKEN\"]\n# ツイート作成関数\ndef post(tweet):\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,\n        consumerSecret,\n        accessToken,",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "accessTokenSecret",
+        "kind": 5,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "peekOfCode": "accessTokenSecret = os.environ[\"TWITTER_ACCESS_TOKEN_SECRET\"]\nbearerToken = os.environ[\"TWITTER_BEARER_TOKEN\"]\n# ツイート作成関数\ndef post(tweet):\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,\n        consumerSecret,\n        accessToken,\n        accessTokenSecret",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "bearerToken",
+        "kind": 5,
+        "importPath": "bot_twitter",
+        "description": "bot_twitter",
+        "peekOfCode": "bearerToken = os.environ[\"TWITTER_BEARER_TOKEN\"]\n# ツイート作成関数\ndef post(tweet):\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,\n        consumerSecret,\n        accessToken,\n        accessTokenSecret\n    )",
+        "detail": "bot_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "make_tweet",
+        "kind": 2,
+        "importPath": "gpt_twitter",
+        "description": "gpt_twitter",
+        "peekOfCode": "def make_tweet():\n    request = \"私はAIを研究する企業を経営しています。私に代わってTwitterに投稿するツイートを150以内で作成して下さい。\\n\\nツイート作成の際は以下の文章を参考にして下さい。\\n\\n\"\n    tweet1 = \"例文1:私ChatGPTは浦田さんに代わってツイートしています。\"\n    tweet2 = \"例文2:私のfacebook'https://www.facebook.com/UrataSoft'もよろしくお願いします。\"\n    content = request + tweet1 + tweet2\n    response = openai.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        temperature=0,\n        messages=[\n            {\"role\": \"user\", \"content\": content},",
+        "detail": "gpt_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "openai.aip_key",
+        "kind": 5,
+        "importPath": "gpt_twitter",
+        "description": "gpt_twitter",
+        "peekOfCode": "openai.aip_key = os.environ[\"OPENAI_API_KEY\"]\n# ChatGPTによるツイート作成関数\ndef make_tweet():\n    request = \"私はAIを研究する企業を経営しています。私に代わってTwitterに投稿するツイートを150以内で作成して下さい。\\n\\nツイート作成の際は以下の文章を参考にして下さい。\\n\\n\"\n    tweet1 = \"例文1:私ChatGPTは浦田さんに代わってツイートしています。\"\n    tweet2 = \"例文2:私のfacebook'https://www.facebook.com/UrataSoft'もよろしくお願いします。\"\n    content = request + tweet1 + tweet2\n    response = openai.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        temperature=0,",
+        "detail": "gpt_twitter",
+        "documentation": {}
+    },
+    {
+        "label": "Block",
+        "kind": 6,
+        "importPath": "jyukidaicho",
+        "description": "jyukidaicho",
+        "peekOfCode": "class Block:\n    hsh = 0\n    def __init__(self, index, timestamp, transaction, previous_hash):\n        self.index = index\n        self.timestamp = timestamp\n        self.transaction = transaction\n        self.previous_hash = previous_hash\n        self.difficulty = 4 #難易度を追加\n        self.property_dict = {str(i): j for i, j in self.__dict__.items()}\n        self.now_hash = self.calc_hash()",
+        "detail": "jyukidaicho",
+        "documentation": {}
+    },
+    {
+        "label": "block_chain",
+        "kind": 5,
+        "importPath": "jyukidaicho",
+        "description": "jyukidaicho",
+        "peekOfCode": "block_chain = [] \n#最初のブロックを作成\nblock = Block(0, 0, [], '-')\nblock.proof = block.mining() \nblock_chain.append(block) \n# ジェネシスブロック作成\ntransaction = Block.new_transaction(\"太郎\", \"花子\", 100)\nnew_block = Block(1, str(datetime.datetime.now()),transaction , block_chain[0].now_hash)\nblock_chain.append(new_block)\n########################################################### ",
+        "detail": "jyukidaicho",
+        "documentation": {}
+    },
+    {
+        "label": "block",
+        "kind": 5,
+        "importPath": "jyukidaicho",
+        "description": "jyukidaicho",
+        "peekOfCode": "block = Block(0, 0, [], '-')\nblock.proof = block.mining() \nblock_chain.append(block) \n# ジェネシスブロック作成\ntransaction = Block.new_transaction(\"太郎\", \"花子\", 100)\nnew_block = Block(1, str(datetime.datetime.now()),transaction , block_chain[0].now_hash)\nblock_chain.append(new_block)\n########################################################### \nfor i in range(5):\n    block = Block(i+1, str(datetime.datetime.now()), [\"適当なトランザクション\"], block_chain[i].now_hash)",
+        "detail": "jyukidaicho",
+        "documentation": {}
+    },
+    {
+        "label": "block.proof",
+        "kind": 5,
+        "importPath": "jyukidaicho",
+        "description": "jyukidaicho",
+        "peekOfCode": "block.proof = block.mining() \nblock_chain.append(block) \n# ジェネシスブロック作成\ntransaction = Block.new_transaction(\"太郎\", \"花子\", 100)\nnew_block = Block(1, str(datetime.datetime.now()),transaction , block_chain[0].now_hash)\nblock_chain.append(new_block)\n########################################################### \nfor i in range(5):\n    block = Block(i+1, str(datetime.datetime.now()), [\"適当なトランザクション\"], block_chain[i].now_hash)\n    block.proof = block.mining()",
+        "detail": "jyukidaicho",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "kind": 5,
+        "importPath": "jyukidaicho",
+        "description": "jyukidaicho",
+        "peekOfCode": "transaction = Block.new_transaction(\"太郎\", \"花子\", 100)\nnew_block = Block(1, str(datetime.datetime.now()),transaction , block_chain[0].now_hash)\nblock_chain.append(new_block)\n########################################################### \nfor i in range(5):\n    block = Block(i+1, str(datetime.datetime.now()), [\"適当なトランザクション\"], block_chain[i].now_hash)\n    block.proof = block.mining()\n    block_chain.append(block)\nfor block in block_chain:\n    for key, value in block.__dict__.items():",
+        "detail": "jyukidaicho",
+        "documentation": {}
+    },
+    {
+        "label": "new_block",
+        "kind": 5,
+        "importPath": "jyukidaicho",
+        "description": "jyukidaicho",
+        "peekOfCode": "new_block = Block(1, str(datetime.datetime.now()),transaction , block_chain[0].now_hash)\nblock_chain.append(new_block)\n########################################################### \nfor i in range(5):\n    block = Block(i+1, str(datetime.datetime.now()), [\"適当なトランザクション\"], block_chain[i].now_hash)\n    block.proof = block.mining()\n    block_chain.append(block)\nfor block in block_chain:\n    for key, value in block.__dict__.items():\n        print(key, ':', value)",
+        "detail": "jyukidaicho",
+        "documentation": {}
+    },
+    {
+        "label": "create_context",
+        "kind": 2,
+        "importPath": "search",
+        "description": "search",
+        "peekOfCode": "def create_context(question, df, max_len=1800):\n    \"\"\"\n    質問と学習データを比較して、コンテキストを作成する関数\n    \"\"\"\n    # 質問をベクトル化\n    q_embeddings = openai.Embedding.create(input=question,engine='text-embedding-ada-002')['data'][0]['embedding']\n    # 質問と学習データと比較してコサイン類似度を計算し、\n    # 「distances」という列に類似度を格納\n    df['distances'] = distances_from_embeddings(q_embeddings,df['embeddings'].apply(eval).apply(np.array).values, distance_metric='cosine')\n    # コンテキストを格納するためのリスト",
+        "detail": "search",
+        "documentation": {}
+    },
+    {
+        "label": "answer_question",
+        "kind": 2,
+        "importPath": "search",
+        "description": "search",
+        "peekOfCode": "def answer_question(question, conversation_history):\n    \"\"\"\n    コンテキストに基づいて質問に答える関数\n    \"\"\"\n    # 学習データを読み込む\n    df = pd.read_csv('embeddings.csv', encoding=\"ANSI\")\n    context = create_context (question, df, max_len=200)\n    # プロンプトを作成し、会話の履歴に追加\n    prompt = f\"あなたはとあるホテルのスタッフです。コンテキストに基づいて、お客様からの質問に丁寧に答えてください。コンテキストが質問に対して回答できない場合は「わかりません」と答えてください。\\n\\nコンテキスト: {context}\\n\\n---\\n\\n質問: {question}\\n回答:\"\n    conversation_history.append({\"role\": \"user\", \"content\": prompt})",
+        "detail": "search",
+        "documentation": {}
+    },
+    {
+        "label": "split_into_man",
+        "kind": 2,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "def split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')\n    n_tokens = [len(tokenizer.encode(\" \" + sentence)) for sentence in sentences]\n    chunks = []\n    tokens_so_far = 0\n    chunk = []\n    # 各文とトークンを組み合わせてループ処理\n    for sentence, token in zip(sentences, n_tokens):\n        # これまでのトークン数と現在の文のトークン数を合計した値が",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "embedding_model",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "embedding_model = \"text-embedding-ada-002\"\nembedding_encoding = \"cl100k_base\"\nmax_tokens = 1500\n# 「scraped.csv」ファイルを読み込み、カラム名を「title」と「text」に変更\ndf = pd.read_csv(\"scraped.csv\")\ndf.columns = ['title', 'text']\ntokenizer = tiktoken.get_encoding(embedding_encoding)\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "embedding_encoding",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "embedding_encoding = \"cl100k_base\"\nmax_tokens = 1500\n# 「scraped.csv」ファイルを読み込み、カラム名を「title」と「text」に変更\ndf = pd.read_csv(\"scraped.csv\")\ndf.columns = ['title', 'text']\ntokenizer = tiktoken.get_encoding(embedding_encoding)\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "max_tokens",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "max_tokens = 1500\n# 「scraped.csv」ファイルを読み込み、カラム名を「title」と「text」に変更\ndf = pd.read_csv(\"scraped.csv\")\ndf.columns = ['title', 'text']\ntokenizer = tiktoken.get_encoding(embedding_encoding)\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')\n    n_tokens = [len(tokenizer.encode(\" \" + sentence)) for sentence in sentences]",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "df = pd.read_csv(\"scraped.csv\")\ndf.columns = ['title', 'text']\ntokenizer = tiktoken.get_encoding(embedding_encoding)\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')\n    n_tokens = [len(tokenizer.encode(\" \" + sentence)) for sentence in sentences]\n    chunks = []\n    tokens_so_far = 0",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "df.columns",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "df.columns = ['title', 'text']\ntokenizer = tiktoken.get_encoding(embedding_encoding)\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')\n    n_tokens = [len(tokenizer.encode(\" \" + sentence)) for sentence in sentences]\n    chunks = []\n    tokens_so_far = 0\n    chunk = []",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "tokenizer = tiktoken.get_encoding(embedding_encoding)\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')\n    n_tokens = [len(tokenizer.encode(\" \" + sentence)) for sentence in sentences]\n    chunks = []\n    tokens_so_far = 0\n    chunk = []\n    # 各文とトークンを組み合わせてループ処理",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "df['n_tokens']",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\ndef split_into_many (text, max_tokens = 500):\n    # テキストを文ごとに分割し、各文のトークン数を取得\n    sentences = text.split('。')\n    n_tokens = [len(tokenizer.encode(\" \" + sentence)) for sentence in sentences]\n    chunks = []\n    tokens_so_far = 0\n    chunk = []\n    # 各文とトークンを組み合わせてループ処理\n    for sentence, token in zip(sentences, n_tokens):",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "shortened",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "shortened = []\n# DataFrameの各行に対してループ処理\nfor row in df.iterrows():\n    # テキストがNoneの場合は、次の行へ進む\n    if row[1]['text'] is None:\n        continue\n    # トークン数が最大トークン数より大きい場合は、テキストを\n    # 「shortened」リストに追加\n    if row[1]['n_tokens'] > max_tokens:\n        shortened += split_into_many(row[1]['text'])",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "df = pd.DataFrame(shortened, columns = ['text'])\n# 各「text」のトークン数を計算し、新しい列「n_tokens」に格納\ndf['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\n# 「text」列のテキストに対してembeddingを行い、CSVファイルに保存\ndf[\"embeddings\"] = df.text.apply(lambda x: get_embedding(x,engine=embedding_model))\ndf.to_csv('embeddings.csv')",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "df['n_tokens']",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))\n# 「text」列のテキストに対してembeddingを行い、CSVファイルに保存\ndf[\"embeddings\"] = df.text.apply(lambda x: get_embedding(x,engine=embedding_model))\ndf.to_csv('embeddings.csv')",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "df[\"embeddings\"]",
+        "kind": 5,
+        "importPath": "text_embedding",
+        "description": "text_embedding",
+        "peekOfCode": "df[\"embeddings\"] = df.text.apply(lambda x: get_embedding(x,engine=embedding_model))\ndf.to_csv('embeddings.csv')",
+        "detail": "text_embedding",
+        "documentation": {}
+    },
+    {
+        "label": "remove_newlines",
+        "kind": 2,
+        "importPath": "text_to_csv_converter",
+        "description": "text_to_csv_converter",
+        "peekOfCode": "def remove_newlines(text):\n    \"\"\"\n    文字列内の改行と連続する空白を削除する関数\n    \"\"\"\n    text = re.sub(r'\\n', ' ', text)\n    text = re.sub(r' +', ' ', text)\n    return text\ndef text_to_df(data_file):\n    \"\"\"\n    #テキストファイルを処理してDataFrameを返す関数",
+        "detail": "text_to_csv_converter",
+        "documentation": {}
+    },
+    {
+        "label": "text_to_df",
+        "kind": 2,
+        "importPath": "text_to_csv_converter",
+        "description": "text_to_csv_converter",
+        "peekOfCode": "def text_to_df(data_file):\n    \"\"\"\n    #テキストファイルを処理してDataFrameを返す関数\n    \"\"\"\n    # テキストを格納するための空のリストを作成\n    texts = []\n    # 指定されたファイル（data_file）を読み込み、変数「file」に格納\n    with open(data_file, 'r', encoding=\"utf-8\") as file:\n        # ファイルの内容を文字列として読み込む\n        text = file.read()",
+        "detail": "text_to_csv_converter",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "text_to_csv_converter",
+        "description": "text_to_csv_converter",
+        "peekOfCode": "df = text_to_df('data.txt')\n# 「scraped.csv」ファイルに書き込む\ndf.to_csv('scraped.csv', index=False, encoding='utf-8')",
+        "detail": "text_to_csv_converter",
+        "documentation": {}
+    },
+    {
+        "label": "tweet",
+        "kind": 5,
+        "importPath": "tweet",
+        "description": "tweet",
+        "peekOfCode": "tweet = gpt_twitter.make_tweet()\nbot_twitter.post(tweet)",
+        "detail": "tweet",
+        "documentation": {}
+    }
+]
