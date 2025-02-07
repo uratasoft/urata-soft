@@ -1,5 +1,5 @@
 # OpenAIにTweet文を生成して貰うプログラム
-import os
+
 # ライブラリ「openai」の読み込み
 from openai import OpenAI
 client = OpenAI()
