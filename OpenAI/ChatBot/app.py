@@ -1,4 +1,5 @@
-import os
+
+# ターミナルでChatGPTと対話するプログラムimport os
 from openai import OpenAI
 from search import answer_question
 client = OpenAI()
