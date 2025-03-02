@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from openai import OpenAI
 
 app = Flask(__name__)
-client = OpenAI(api_key="YOUR_OPENAI_API_KEY")
+client = OpenAI(api_key="OPENAI_PLUS_KEY")
 
 @app.route("/chat", methods=["POST"])
 def chat():

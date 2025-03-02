@@ -133,11 +133,12 @@
         "documentation": {}
     },
     {
-        "label": "jsonify",
-        "importPath": "flask",
-        "description": "flask",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "flask",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -165,15 +166,6 @@
         "importPath": "tweepy",
         "description": "tweepy",
         "detail": "tweepy",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
         "documentation": {}
     },
     {
@@ -280,7 +272,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.govsupbot",
         "description": "OpenAI.SmartCity.govsupbot",
-        "peekOfCode": "app = Flask(__name__)\nclient = OpenAI(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:",
+        "peekOfCode": "app = Flask(__name__)\nclient = OpenAI(api_key=\"OPENAI_PLUS_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:",
         "detail": "OpenAI.SmartCity.govsupbot",
         "documentation": {}
     },
@@ -289,7 +281,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.govsupbot",
         "description": "OpenAI.SmartCity.govsupbot",
-        "peekOfCode": "client = OpenAI(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:\n        print(f\"Error parsing JSON: {e}\")  # JSON の解析エラーを確認",
+        "peekOfCode": "client = OpenAI(api_key=\"OPENAI_PLUS_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:\n        print(f\"Error parsing JSON: {e}\")  # JSON の解析エラーを確認",
         "detail": "OpenAI.SmartCity.govsupbot",
         "documentation": {}
     },
@@ -298,7 +290,7 @@
         "kind": 2,
         "importPath": "OpenAI.SmartCity.govsupbot2",
         "description": "OpenAI.SmartCity.govsupbot2",
-        "peekOfCode": "def chat():\n    try:\n        # JSONデータを UTF-8 で強制デコード\n        data = request.data.decode(\"utf-8\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return jsonify({\"error\": \"Invalid JSON: 'message' field is required\"}), 400\n        user_input = json_data[\"message\"]\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認",
+        "peekOfCode": "def chat():\n    try:\n        # JSONデータをSHIFT_JISで強制デコード\n        data = request.data.decode(\"shift_jis\", errors=\"ignore\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return app.response_class(\n                response=json.dumps({\"error\": \"Invalid JSON: 'message' field is required\"}, ensure_ascii=False),\n                status=400,\n                mimetype=\"application/json\"",
         "detail": "OpenAI.SmartCity.govsupbot2",
         "documentation": {}
     },
@@ -307,7 +299,16 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.govsupbot2",
         "description": "OpenAI.SmartCity.govsupbot2",
-        "peekOfCode": "app = Flask(__name__)\nclient = openai.Client(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータを UTF-8 で強制デコード\n        data = request.data.decode(\"utf-8\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return jsonify({\"error\": \"Invalid JSON: 'message' field is required\"}), 400",
+        "peekOfCode": "app = Flask(__name__)\n# 環境変数からAPI_KEYを取得する\nplus_key = os.environ[\"OPENAI_PLUS_KEY\"]\nclient = openai.Client(api_key=plus_key)\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータをSHIFT_JISで強制デコード\n        data = request.data.decode(\"shift_jis\", errors=\"ignore\")  \n        json_data = json.loads(data)  # JSON デコード",
+        "detail": "OpenAI.SmartCity.govsupbot2",
+        "documentation": {}
+    },
+    {
+        "label": "plus_key",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.govsupbot2",
+        "description": "OpenAI.SmartCity.govsupbot2",
+        "peekOfCode": "plus_key = os.environ[\"OPENAI_PLUS_KEY\"]\nclient = openai.Client(api_key=plus_key)\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータをSHIFT_JISで強制デコード\n        data = request.data.decode(\"shift_jis\", errors=\"ignore\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return app.response_class(",
         "detail": "OpenAI.SmartCity.govsupbot2",
         "documentation": {}
     },
@@ -316,7 +317,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.govsupbot2",
         "description": "OpenAI.SmartCity.govsupbot2",
-        "peekOfCode": "client = openai.Client(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータを UTF-8 で強制デコード\n        data = request.data.decode(\"utf-8\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return jsonify({\"error\": \"Invalid JSON: 'message' field is required\"}), 400\n        user_input = json_data[\"message\"]",
+        "peekOfCode": "client = openai.Client(api_key=plus_key)\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータをSHIFT_JISで強制デコード\n        data = request.data.decode(\"shift_jis\", errors=\"ignore\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return app.response_class(\n                response=json.dumps({\"error\": \"Invalid JSON: 'message' field is required\"}, ensure_ascii=False),",
         "detail": "OpenAI.SmartCity.govsupbot2",
         "documentation": {}
     },
