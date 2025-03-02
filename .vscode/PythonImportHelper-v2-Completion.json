@@ -1,5 +1,22 @@
 [
     {
+        "label": "openai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openai",
+        "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
         "label": "OpenAI",
         "importPath": "openai",
         "description": "openai",
@@ -55,6 +72,72 @@
         "description": "util",
         "isExtraImport": true,
         "detail": "util",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
         "documentation": {}
     },
     {
@@ -136,6 +219,105 @@
         "description": "OpenAI.ChatBot.search",
         "peekOfCode": "client = OpenAI()\nimport numpy as np\nfrom util import distances_from_embeddings\ndef create_context(question, df, max_len=1800):\n    \"\"\"\n    質問と学習データを比較して、コンテキストを作成する関数\n    \"\"\"\n    # 質問をベクトル化\n    q_embeddings = client.embeddings.create(input=question,model='text-embedding-3-small')['data'][0].embedding\n    # 質問と学習データと比較してコサイン類似度を計算し、",
         "detail": "OpenAI.ChatBot.search",
+        "documentation": {}
+    },
+    {
+        "label": "new_func",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.encode",
+        "description": "OpenAI.SmartCity.encode",
+        "peekOfCode": "def new_func(response):\n    print(response.json())\nnew_func(response)",
+        "detail": "OpenAI.SmartCity.encode",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.encode",
+        "description": "OpenAI.SmartCity.encode",
+        "peekOfCode": "url = \"http://127.0.0.1:5000/chat\"\nheaders = {\"Content-Type\": \"application/json; charset=utf-8\"}\ndata = {\"message\": \"流山市のゴミ収集日は？\"}\nresponse = requests.post(url, headers=headers, data=json.dumps(data, ensure_ascii=False).encode(\"utf-8\"))\ndef new_func(response):\n    print(response.json())\nnew_func(response)",
+        "detail": "OpenAI.SmartCity.encode",
+        "documentation": {}
+    },
+    {
+        "label": "headers",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.encode",
+        "description": "OpenAI.SmartCity.encode",
+        "peekOfCode": "headers = {\"Content-Type\": \"application/json; charset=utf-8\"}\ndata = {\"message\": \"流山市のゴミ収集日は？\"}\nresponse = requests.post(url, headers=headers, data=json.dumps(data, ensure_ascii=False).encode(\"utf-8\"))\ndef new_func(response):\n    print(response.json())\nnew_func(response)",
+        "detail": "OpenAI.SmartCity.encode",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.encode",
+        "description": "OpenAI.SmartCity.encode",
+        "peekOfCode": "data = {\"message\": \"流山市のゴミ収集日は？\"}\nresponse = requests.post(url, headers=headers, data=json.dumps(data, ensure_ascii=False).encode(\"utf-8\"))\ndef new_func(response):\n    print(response.json())\nnew_func(response)",
+        "detail": "OpenAI.SmartCity.encode",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.encode",
+        "description": "OpenAI.SmartCity.encode",
+        "peekOfCode": "response = requests.post(url, headers=headers, data=json.dumps(data, ensure_ascii=False).encode(\"utf-8\"))\ndef new_func(response):\n    print(response.json())\nnew_func(response)",
+        "detail": "OpenAI.SmartCity.encode",
+        "documentation": {}
+    },
+    {
+        "label": "chat",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.govsupbot",
+        "description": "OpenAI.SmartCity.govsupbot",
+        "peekOfCode": "def chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:\n        print(f\"Error parsing JSON: {e}\")  # JSON の解析エラーを確認\n        return jsonify({\"error\": \"Invalid JSON format\"}), 400\n    # メッセージが空でないことを確認",
+        "detail": "OpenAI.SmartCity.govsupbot",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.govsupbot",
+        "description": "OpenAI.SmartCity.govsupbot",
+        "peekOfCode": "app = Flask(__name__)\nclient = OpenAI(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:",
+        "detail": "OpenAI.SmartCity.govsupbot",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.govsupbot",
+        "description": "OpenAI.SmartCity.govsupbot",
+        "peekOfCode": "client = OpenAI(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    # リクエストからメッセージを取得\n    try:\n        user_input = request.json.get(\"message\", \"\")\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認\n    except Exception as e:\n        print(f\"Error parsing JSON: {e}\")  # JSON の解析エラーを確認",
+        "detail": "OpenAI.SmartCity.govsupbot",
+        "documentation": {}
+    },
+    {
+        "label": "chat",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.govsupbot2",
+        "description": "OpenAI.SmartCity.govsupbot2",
+        "peekOfCode": "def chat():\n    try:\n        # JSONデータを UTF-8 で強制デコード\n        data = request.data.decode(\"utf-8\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return jsonify({\"error\": \"Invalid JSON: 'message' field is required\"}), 400\n        user_input = json_data[\"message\"]\n        print(f\"Received JSON request: {request.json}\")  # リクエスト全体を確認\n        print(f\"Received user input: {user_input}\")  # ユーザー入力内容を確認",
+        "detail": "OpenAI.SmartCity.govsupbot2",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.govsupbot2",
+        "description": "OpenAI.SmartCity.govsupbot2",
+        "peekOfCode": "app = Flask(__name__)\nclient = openai.Client(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータを UTF-8 で強制デコード\n        data = request.data.decode(\"utf-8\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return jsonify({\"error\": \"Invalid JSON: 'message' field is required\"}), 400",
+        "detail": "OpenAI.SmartCity.govsupbot2",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.govsupbot2",
+        "description": "OpenAI.SmartCity.govsupbot2",
+        "peekOfCode": "client = openai.Client(api_key=\"YOUR_OPENAI_API_KEY\")\n@app.route(\"/chat\", methods=[\"POST\"])\ndef chat():\n    try:\n        # JSONデータを UTF-8 で強制デコード\n        data = request.data.decode(\"utf-8\")  \n        json_data = json.loads(data)  # JSON デコード\n        if not json_data or \"message\" not in json_data:\n            return jsonify({\"error\": \"Invalid JSON: 'message' field is required\"}), 400\n        user_input = json_data[\"message\"]",
+        "detail": "OpenAI.SmartCity.govsupbot2",
         "documentation": {}
     },
     {

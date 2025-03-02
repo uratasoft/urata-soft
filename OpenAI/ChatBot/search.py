@@ -1,4 +1,6 @@
 import pandas as pd
+
+
 from openai import OpenAI
 client = OpenAI()
 import numpy as np
