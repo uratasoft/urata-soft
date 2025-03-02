@@ -67,6 +67,24 @@
         "documentation": {}
     },
     {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -179,6 +197,24 @@
         "description": "OpenAI.ChatBot.search",
         "peekOfCode": "client = OpenAI()\nimport numpy as np\nfrom util import distances_from_embeddings\ndef create_context(question, df, max_len=1800):\n    \"\"\"\n    質問と学習データを比較して、コンテキストを作成する関数\n    \"\"\"\n    # 質問をベクトル化\n    q_embeddings = client.embeddings.create(input=question,model='text-embedding-3-small')['data'][0].embedding\n    # 質問と学習データと比較してコサイン類似度を計算し、",
         "detail": "OpenAI.ChatBot.search",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "model = torch.hub.load('ultralytics/yolov5', 'yolov5s')\n# カメラ映像をキャプチャ\ncap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    # AI解析\n    results = model(frame)\n    # 検出結果をフレームに描画",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    # AI解析\n    results = model(frame)\n    # 検出結果をフレームに描画\n    for img in results.render():  # YOLOv5の結果を取得\n        frame = img  # 画像を更新",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
         "documentation": {}
     },
     {
