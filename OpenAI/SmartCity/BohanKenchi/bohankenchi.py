@@ -1,12 +1,13 @@
 # スマート防犯システム（AI異常検知）
-# YOLO（You Only Look Once）とは物体検出のための深層学習アルゴリズム
+# YOLO（You Only Look Once）物体検出深層学習アルゴリズムを使用し
+# 
 
 import cv2  # OpenCV（カメラ映像取得）
 import torch  # PyTorch（YOLOを動かすため）
 import datetime  # 日時の取得
 import winsound  # 音声アラート（Windows）
-#import smtplib  # メール送信
-#from email.mime.text import MIMEText  # メール送信用
+import smtplib  # メール送信
+from email.mime.text import MIMEText  # メール送信用
 from ultralytics import YOLO  # 最新の YOLOv8 を使用
 
 # 🔹 GPUを使用可能ならCUDA、なければCPUを使用
@@ -29,9 +30,9 @@ with open(log_file, "w") as f:
     f.write("=== 監視カメラログ ===\n")
 
 # 🔹 メール通知設定
-EMAIL_SENDER = "my@address"
-EMAIL_PASSWORD = "passwd"
-EMAIL_RECEIVER = "my@address"
+EMAIL_SENDER = "urata@mtd.biglobe.ne.jp"
+EMAIL_PASSWORD = "urataaino1"
+EMAIL_RECEIVER = "urata@mtd.biglobe.ne.jp"
 
 def send_alert(message):
     """ 検出した異常をメールで送信 """
@@ -41,7 +42,7 @@ def send_alert(message):
     msg["To"] = EMAIL_RECEIVER
 
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        with smtplib.SMTP("mail.biglobe.ne.jp", 587) as server:
             server.starttls()
             server.login(EMAIL_SENDER, EMAIL_PASSWORD)
             server.sendmail(EMAIL_SENDER, EMAIL_RECEIVER, msg.as_string())
@@ -51,6 +52,9 @@ def send_alert(message):
         
 # 🔹 監視を続ける
 while True:
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+    
     ret, frame = cap.read()  # カメラの映像を取得
     if not ret:
         print("カメラの映像が取得できません。終了します。")
@@ -87,7 +91,7 @@ while True:
         winsound.Beep(1000, 500)  # 1kHzの音を0.5秒鳴らす
 
         # 🔹 メール通知
-        #send_alert(log_text)
+        send_alert(log_text)
 
     # 🔹 YOLOの検出結果を描画
     frame_with_detections = results[0].plot()
