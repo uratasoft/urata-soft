@@ -1,6 +1,5 @@
 # スマート防犯システム（AI異常検知）
 # YOLO（You Only Look Once）物体検出深層学習アルゴリズムを使用し
-# 
 
 import cv2  # OpenCV（カメラ映像取得）
 import torch  # PyTorch（YOLOを動かすため）
@@ -42,6 +41,7 @@ def send_alert(message):
     msg["To"] = EMAIL_RECEIVER
 
     try:
+        # with smtplib.SMTP_SSL("mail.biglobe.ne.jp", 465) as server: SSLの場合
         with smtplib.SMTP("mail.biglobe.ne.jp", 587) as server:
             server.starttls()
             server.login(EMAIL_SENDER, EMAIL_PASSWORD)

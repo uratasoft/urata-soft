@@ -85,6 +85,49 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "winsound",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "winsound",
+        "description": "winsound",
+        "detail": "winsound",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
+        "documentation": {}
+    },
+    {
+        "label": "YOLO",
+        "importPath": "ultralytics",
+        "description": "ultralytics",
+        "isExtraImport": true,
+        "detail": "ultralytics",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -200,11 +243,29 @@
         "documentation": {}
     },
     {
+        "label": "send_alert",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "def send_alert(message):\n    \"\"\" 検出した異常をメールで送信 \"\"\"\n    msg = MIMEText(message)\n    msg[\"Subject\"] = \"【監視カメラアラート】異常検出\"\n    msg[\"From\"] = EMAIL_SENDER\n    msg[\"To\"] = EMAIL_RECEIVER\n    try:\n        # with smtplib.SMTP_SSL(\"mail.biglobe.ne.jp\", 465) as server: SSLの場合\n        with smtplib.SMTP(\"mail.biglobe.ne.jp\", 587) as server:\n            server.starttls()",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "device = 'cuda' if torch.cuda.is_available() else 'cpu'\n# 🔹 YOLOv8モデルをロード（物体検出用）\nmodel = YOLO(\"yolov8s.pt\")\n# 🔹 カメラを開く（0はデフォルトのカメラ）\ncap = cv2.VideoCapture(0)\nif not cap.isOpened():\n    print(\"カメラが開けませんでした。プログラムを終了します。\")\n    exit()\n# 🔹 監視ログファイルを作成\nlog_file = \"detection_log.txt\"",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
         "label": "model",
         "kind": 5,
         "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
         "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
-        "peekOfCode": "model = torch.hub.load('ultralytics/yolov5', 'yolov5s')\n# カメラ映像をキャプチャ\ncap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    # AI解析\n    results = model(frame)\n    # 検出結果をフレームに描画",
+        "peekOfCode": "model = YOLO(\"yolov8s.pt\")\n# 🔹 カメラを開く（0はデフォルトのカメラ）\ncap = cv2.VideoCapture(0)\nif not cap.isOpened():\n    print(\"カメラが開けませんでした。プログラムを終了します。\")\n    exit()\n# 🔹 監視ログファイルを作成\nlog_file = \"detection_log.txt\"\nwith open(log_file, \"w\") as f:\n    f.write(\"=== 監視カメラログ ===\\n\")",
         "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
         "documentation": {}
     },
@@ -213,7 +274,43 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
         "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
-        "peekOfCode": "cap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    # AI解析\n    results = model(frame)\n    # 検出結果をフレームに描画\n    for img in results.render():  # YOLOv5の結果を取得\n        frame = img  # 画像を更新",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\nif not cap.isOpened():\n    print(\"カメラが開けませんでした。プログラムを終了します。\")\n    exit()\n# 🔹 監視ログファイルを作成\nlog_file = \"detection_log.txt\"\nwith open(log_file, \"w\") as f:\n    f.write(\"=== 監視カメラログ ===\\n\")\n# 🔹 メール通知設定\nEMAIL_SENDER = \"urata@mtd.biglobe.ne.jp\"",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
+        "label": "log_file",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "log_file = \"detection_log.txt\"\nwith open(log_file, \"w\") as f:\n    f.write(\"=== 監視カメラログ ===\\n\")\n# 🔹 メール通知設定\nEMAIL_SENDER = \"urata@mtd.biglobe.ne.jp\"\nEMAIL_PASSWORD = \"urataaino1\"\nEMAIL_RECEIVER = \"urata@mtd.biglobe.ne.jp\"\ndef send_alert(message):\n    \"\"\" 検出した異常をメールで送信 \"\"\"\n    msg = MIMEText(message)",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_SENDER",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "EMAIL_SENDER = \"urata@mtd.biglobe.ne.jp\"\nEMAIL_PASSWORD = \"urataaino1\"\nEMAIL_RECEIVER = \"urata@mtd.biglobe.ne.jp\"\ndef send_alert(message):\n    \"\"\" 検出した異常をメールで送信 \"\"\"\n    msg = MIMEText(message)\n    msg[\"Subject\"] = \"【監視カメラアラート】異常検出\"\n    msg[\"From\"] = EMAIL_SENDER\n    msg[\"To\"] = EMAIL_RECEIVER\n    try:",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PASSWORD",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "EMAIL_PASSWORD = \"urataaino1\"\nEMAIL_RECEIVER = \"urata@mtd.biglobe.ne.jp\"\ndef send_alert(message):\n    \"\"\" 検出した異常をメールで送信 \"\"\"\n    msg = MIMEText(message)\n    msg[\"Subject\"] = \"【監視カメラアラート】異常検出\"\n    msg[\"From\"] = EMAIL_SENDER\n    msg[\"To\"] = EMAIL_RECEIVER\n    try:\n        # with smtplib.SMTP_SSL(\"mail.biglobe.ne.jp\", 465) as server: SSLの場合",
+        "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_RECEIVER",
+        "kind": 5,
+        "importPath": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "description": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
+        "peekOfCode": "EMAIL_RECEIVER = \"urata@mtd.biglobe.ne.jp\"\ndef send_alert(message):\n    \"\"\" 検出した異常をメールで送信 \"\"\"\n    msg = MIMEText(message)\n    msg[\"Subject\"] = \"【監視カメラアラート】異常検出\"\n    msg[\"From\"] = EMAIL_SENDER\n    msg[\"To\"] = EMAIL_RECEIVER\n    try:\n        # with smtplib.SMTP_SSL(\"mail.biglobe.ne.jp\", 465) as server: SSLの場合\n        with smtplib.SMTP(\"mail.biglobe.ne.jp\", 587) as server:",
         "detail": "OpenAI.SmartCity.BohanKenchi.bohankenchi",
         "documentation": {}
     },
