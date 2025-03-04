@@ -1,0 +1,10 @@
+<form method="POST">
+    <label>医療機関名:</label>
+    <input type="text" name="name" required><br>
+    <label>所在地:</label>
+    <input type="text" name="location" required><br>
+    <label>連絡先:</label>
+    <input type="text" name="contact" required><br>
+    <button type="submit">登録</button>
+</form>
+<a href="{{ url_for('medical_center_list') }}">医療機関一覧</a>

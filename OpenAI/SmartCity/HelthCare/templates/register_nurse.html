@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>看護師登録</title>
+</head>
+<body>
+    <h2>看護師の登録</h2>
+    <form method="POST">
+        <label>名前:</label>
+        <input type="text" name="name" required><br>
+        <label>連絡先:</label>
+        <input type="text" name="contact" required><br>
+        <label>専門分野:</label>
+        <input type="text" name="specialty" required><br>
+        <button type="submit">登録</button>
+    </form>
+    <a href="{{ url_for('nurse_list') }}">看護師一覧</a>
+</body>
+</html>

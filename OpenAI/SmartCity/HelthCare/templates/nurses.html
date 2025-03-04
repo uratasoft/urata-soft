@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>看護師一覧</title>
+</head>
+<body>
+    <h2>登録された看護師</h2>
+    <ul>
+        {% for nurse in nurses %}
+            <li>{{ nurse.name }}（専門: {{ nurse.specialty }} / 連絡先: {{ nurse.contact }}）</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('register_nurse') }}">新しい看護師を登録</a>
+</body>
+</html>

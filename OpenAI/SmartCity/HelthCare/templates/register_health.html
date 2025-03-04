@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>健康データ登録</title>
+</head>
+<body>
+    <h2>市民の健康データ登録</h2>
+    <form method="POST">
+        <label>名前:</label>
+        <input type="text" name="name" required><br>
+        <label>年齢:</label>
+        <input type="number" name="age" required><br>
+        <label>症状:</label>
+        <input type="text" name="symptoms" required><br>
+        <label>服薬情報:</label>
+        <input type="text" name="medications" required><br>
+        <label>緊急連絡先:</label>
+        <input type="text" name="emergency_contact" required><br>
+        <button type="submit">登録</button>
+    </form>
+    <a href="{{ url_for('health_list') }}">健康データ一覧</a>
+</body>
+</html>

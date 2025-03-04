@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>健康データ一覧</title>
+</head>
+<body>
+    <h2>登録された健康データ</h2>
+    <ul>
+        {% for record in health_records %}
+            <li>{{ record.name }}（年齢: {{ record.age }} / 症状: {{ record.symptoms }}）</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('register_health') }}">新しい健康データを登録</a>
+</body>
+</html>
