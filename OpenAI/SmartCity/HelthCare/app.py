@@ -1,15 +1,14 @@
 import os
 import json
-import time
-import schedule
+import logging
 import smtplib
 from datetime import datetime
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from email.mime.text import MIMEText
 from openai import OpenAI
 
-# Flask アプリの設定
+# Flaskアプリ設定
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthcare.db'
 app.config['SECRET_KEY'] = 'your_secret_key'
@@ -17,6 +16,9 @@ db = SQLAlchemy(app)
 
 # OpenAI API 初期化
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# ログ設定
+logging.basicConfig(filename='healthcare.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # **データベースモデル**
 class CitizenHealth(db.Model):
@@ -27,12 +29,19 @@ class CitizenHealth(db.Model):
     medications = db.Column(db.String(255), nullable=False)
     diagnosis = db.Column(db.String(255), nullable=True)
     emergency_contact = db.Column(db.String(100), nullable=False)
+    status = db.Column(db.String(50), nullable=True, default="未診断")
 
 class Nurse(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     contact = db.Column(db.String(50), nullable=False)
     specialty = db.Column(db.String(100), nullable=False)
+
+class MedicalCenter(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    location = db.Column(db.String(200), nullable=False)
+    contact = db.Column(db.String(50), nullable=False)
 
 # DB 初期化
 with app.app_context():
@@ -56,7 +65,25 @@ def register_health():
         # **GPT-4o による診断**
         diagnosis = analyze_health_status(name, age, symptoms)
         new_health.diagnosis = diagnosis
+        new_health.status = "診断済み"
         db.session.commit()
+
+        log_action(f"✅ {name} さんの診断結果: {diagnosis}")
+
+        # **緊急度が高い場合、医療機関と看護師を手配**
+        if "高" in diagnosis:
+            notify_medical_center(new_health)
+            dispatch_nurse(new_health)
+            notify_family(new_health)
+            new_health.status = "緊急対応"
+            db.session.commit()
+        elif "中" in diagnosis:
+            notify_family(new_health)
+            new_health.status = "要注意"
+            db.session.commit()
+        else:
+            new_health.status = "軽度"
+            db.session.commit()
 
         return redirect(url_for('health_list'))
 
@@ -67,6 +94,13 @@ def register_health():
 def health_list():
     health_records = CitizenHealth.query.all()
     return render_template('health_records.html', health_records=health_records)
+
+# **リアルタイム診断ログを表示**
+@app.route('/logs')
+def view_logs():
+    with open('healthcare.log', 'r') as file:
+        logs = file.readlines()
+    return render_template('logs.html', logs=logs)
 
 # **GPT-4o による健康チェック**
 def analyze_health_status(name, age, symptoms):
@@ -87,35 +121,32 @@ def analyze_health_status(name, age, symptoms):
 
     return response.choices[0].message.content
 
+# **医療機関へ通知**
+def notify_medical_center(health_data):
+    medical_centers = MedicalCenter.query.all()
+    if not medical_centers:
+        return
+
+    selected_center = medical_centers[0]
+    log_action(f"🏥 {health_data.name} さんを {selected_center.name} に連絡")
+
+# **訪問看護師を手配**
+def dispatch_nurse(health_data):
+    nurses = Nurse.query.all()
+    if not nurses:
+        return
+
+    nurse = nurses[0]
+    log_action(f"🚑 {health_data.name} さんに {nurse.name} 看護師を派遣")
+
 # **家族へ通知**
 def notify_family(health_data):
-    recipient = health_data.emergency_contact
-    subject = f"【健康通知】{health_data.name} さんの健康状態について"
-    body = f"{health_data.diagnosis}\n\n適切な対応をお願いします。"
+    log_action(f"📩 家族へ通知を送信: {health_data.name} さんの健康状態")
 
-    msg = MIMEText(body)
-    msg["Subject"] = subject
-    msg["From"] = "healthcare@smartcity.com"
-    msg["To"] = recipient
+# **アクションログを記録**
+def log_action(message):
+    logging.info(message)
 
-    try:
-        with smtplib.SMTP("smtp.example.com") as server:
-            server.sendmail("healthcare@smartcity.com", recipient, msg.as_string())
-        print(f"\n📩 家族へ通知を送信しました。（宛先: {recipient}）")
-    except Exception as e:
-        print(f"\n⚠️ メール送信失敗: {e}")
-
-# **服薬リマインド**
-def remind_medications():
-    now = datetime.now().strftime("%H:%M")
-    health_records = CitizenHealth.query.all()
-    for record in health_records:
-        print(f"🕒 {now} - {record.name} の服薬リマインド: {record.medications}")
-
-# **スケジュール管理**
-schedule.every().day.at("08:00").do(remind_medications)
-schedule.every().day.at("20:00").do(remind_medications)
-
-# Flask アプリ起動
+# **Flaskアプリ起動**
 if __name__ == '__main__':
     app.run(debug=True)

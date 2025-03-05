@@ -226,6 +226,135 @@
         "documentation": {}
     },
     {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -241,118 +370,6 @@
         "importPath": "schedule",
         "description": "schedule",
         "detail": "schedule",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "SQLAlchemy",
-        "importPath": "flask_sqlalchemy",
-        "description": "flask_sqlalchemy",
-        "isExtraImport": true,
-        "detail": "flask_sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "SQLAlchemy",
-        "importPath": "flask_sqlalchemy",
-        "description": "flask_sqlalchemy",
-        "isExtraImport": true,
-        "detail": "flask_sqlalchemy",
         "documentation": {}
     },
     {
@@ -513,7 +530,7 @@
         "kind": 6,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "class CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)\n    symptoms = db.Column(db.String(255), nullable=False)\n    medications = db.Column(db.String(255), nullable=False)\n    diagnosis = db.Column(db.String(255), nullable=True)\n    emergency_contact = db.Column(db.String(100), nullable=False)\nclass Nurse(db.Model):\n    id = db.Column(db.Integer, primary_key=True)",
+        "peekOfCode": "class CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)\n    symptoms = db.Column(db.String(255), nullable=False)\n    medications = db.Column(db.String(255), nullable=False)\n    diagnosis = db.Column(db.String(255), nullable=True)\n    emergency_contact = db.Column(db.String(100), nullable=False)\n    status = db.Column(db.String(50), nullable=True, default=\"未診断\")\nclass Nurse(db.Model):",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -522,7 +539,16 @@
         "kind": 6,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "class Nurse(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    contact = db.Column(db.String(50), nullable=False)\n    specialty = db.Column(db.String(100), nullable=False)\n# DB 初期化\nwith app.app_context():\n    db.create_all()\n# **健康データ登録**\n@app.route('/health', methods=['GET', 'POST'])",
+        "peekOfCode": "class Nurse(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    contact = db.Column(db.String(50), nullable=False)\n    specialty = db.Column(db.String(100), nullable=False)\nclass MedicalCenter(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    location = db.Column(db.String(200), nullable=False)\n    contact = db.Column(db.String(50), nullable=False)",
+        "detail": "OpenAI.SmartCity.HelthCare.app",
+        "documentation": {}
+    },
+    {
+        "label": "MedicalCenter",
+        "kind": 6,
+        "importPath": "OpenAI.SmartCity.HelthCare.app",
+        "description": "OpenAI.SmartCity.HelthCare.app",
+        "peekOfCode": "class MedicalCenter(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    location = db.Column(db.String(200), nullable=False)\n    contact = db.Column(db.String(50), nullable=False)\n# DB 初期化\nwith app.app_context():\n    db.create_all()\n# **健康データ登録**\n@app.route('/health', methods=['GET', 'POST'])",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -540,7 +566,16 @@
         "kind": 2,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "def health_list():\n    health_records = CitizenHealth.query.all()\n    return render_template('health_records.html', health_records=health_records)\n# **GPT-4o による健康チェック**\ndef analyze_health_status(name, age, symptoms):\n    prompt = f\"\"\"\n    {name} さん（{age}歳）の健康状態を評価してください。\n    【症状】{symptoms}\n    診断結果：\n    - 緊急性: (低 / 中 / 高)",
+        "peekOfCode": "def health_list():\n    health_records = CitizenHealth.query.all()\n    return render_template('health_records.html', health_records=health_records)\n# **リアルタイム診断ログを表示**\n@app.route('/logs')\ndef view_logs():\n    with open('healthcare.log', 'r') as file:\n        logs = file.readlines()\n    return render_template('logs.html', logs=logs)\n# **GPT-4o による健康チェック**",
+        "detail": "OpenAI.SmartCity.HelthCare.app",
+        "documentation": {}
+    },
+    {
+        "label": "view_logs",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.HelthCare.app",
+        "description": "OpenAI.SmartCity.HelthCare.app",
+        "peekOfCode": "def view_logs():\n    with open('healthcare.log', 'r') as file:\n        logs = file.readlines()\n    return render_template('logs.html', logs=logs)\n# **GPT-4o による健康チェック**\ndef analyze_health_status(name, age, symptoms):\n    prompt = f\"\"\"\n    {name} さん（{age}歳）の健康状態を評価してください。\n    【症状】{symptoms}\n    診断結果：",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -554,20 +589,38 @@
         "documentation": {}
     },
     {
-        "label": "notify_family",
+        "label": "notify_medical_center",
         "kind": 2,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "def notify_family(health_data):\n    recipient = health_data.emergency_contact\n    subject = f\"【健康通知】{health_data.name} さんの健康状態について\"\n    body = f\"{health_data.diagnosis}\\n\\n適切な対応をお願いします。\"\n    msg = MIMEText(body)\n    msg[\"Subject\"] = subject\n    msg[\"From\"] = \"healthcare@smartcity.com\"\n    msg[\"To\"] = recipient\n    try:\n        with smtplib.SMTP(\"smtp.example.com\") as server:",
+        "peekOfCode": "def notify_medical_center(health_data):\n    medical_centers = MedicalCenter.query.all()\n    if not medical_centers:\n        return\n    selected_center = medical_centers[0]\n    log_action(f\"🏥 {health_data.name} さんを {selected_center.name} に連絡\")\n# **訪問看護師を手配**\ndef dispatch_nurse(health_data):\n    nurses = Nurse.query.all()\n    if not nurses:",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
     {
-        "label": "remind_medications",
+        "label": "dispatch_nurse",
         "kind": 2,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "def remind_medications():\n    now = datetime.now().strftime(\"%H:%M\")\n    health_records = CitizenHealth.query.all()\n    for record in health_records:\n        print(f\"🕒 {now} - {record.name} の服薬リマインド: {record.medications}\")\n# **スケジュール管理**\nschedule.every().day.at(\"08:00\").do(remind_medications)\nschedule.every().day.at(\"20:00\").do(remind_medications)\n# Flask アプリ起動\nif __name__ == '__main__':",
+        "peekOfCode": "def dispatch_nurse(health_data):\n    nurses = Nurse.query.all()\n    if not nurses:\n        return\n    nurse = nurses[0]\n    log_action(f\"🚑 {health_data.name} さんに {nurse.name} 看護師を派遣\")\n# **家族へ通知**\ndef notify_family(health_data):\n    log_action(f\"📩 家族へ通知を送信: {health_data.name} さんの健康状態\")\n# **アクションログを記録**",
+        "detail": "OpenAI.SmartCity.HelthCare.app",
+        "documentation": {}
+    },
+    {
+        "label": "notify_family",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.HelthCare.app",
+        "description": "OpenAI.SmartCity.HelthCare.app",
+        "peekOfCode": "def notify_family(health_data):\n    log_action(f\"📩 家族へ通知を送信: {health_data.name} さんの健康状態\")\n# **アクションログを記録**\ndef log_action(message):\n    logging.info(message)\n# **Flaskアプリ起動**\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "OpenAI.SmartCity.HelthCare.app",
+        "documentation": {}
+    },
+    {
+        "label": "log_action",
+        "kind": 2,
+        "importPath": "OpenAI.SmartCity.HelthCare.app",
+        "description": "OpenAI.SmartCity.HelthCare.app",
+        "peekOfCode": "def log_action(message):\n    logging.info(message)\n# **Flaskアプリ起動**\nif __name__ == '__main__':\n    app.run(debug=True)",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -576,7 +629,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthcare.db'\napp.config['SECRET_KEY'] = 'your_secret_key'\ndb = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthcare.db'\napp.config['SECRET_KEY'] = 'your_secret_key'\ndb = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# ログ設定\nlogging.basicConfig(filename='healthcare.log', level=logging.INFO, format='%(asctime)s - %(message)s')\n# **データベースモデル**\nclass CitizenHealth(db.Model):",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -585,7 +638,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthcare.db'\napp.config['SECRET_KEY'] = 'your_secret_key'\ndb = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///healthcare.db'\napp.config['SECRET_KEY'] = 'your_secret_key'\ndb = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# ログ設定\nlogging.basicConfig(filename='healthcare.log', level=logging.INFO, format='%(asctime)s - %(message)s')\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -594,7 +647,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "app.config['SECRET_KEY'] = 'your_secret_key'\ndb = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)\n    symptoms = db.Column(db.String(255), nullable=False)",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'your_secret_key'\ndb = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# ログ設定\nlogging.basicConfig(filename='healthcare.log', level=logging.INFO, format='%(asctime)s - %(message)s')\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -603,7 +656,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "db = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)\n    symptoms = db.Column(db.String(255), nullable=False)\n    medications = db.Column(db.String(255), nullable=False)",
+        "peekOfCode": "db = SQLAlchemy(app)\n# OpenAI API 初期化\nclient = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# ログ設定\nlogging.basicConfig(filename='healthcare.log', level=logging.INFO, format='%(asctime)s - %(message)s')\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },
@@ -612,7 +665,7 @@
         "kind": 5,
         "importPath": "OpenAI.SmartCity.HelthCare.app",
         "description": "OpenAI.SmartCity.HelthCare.app",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)\n    symptoms = db.Column(db.String(255), nullable=False)\n    medications = db.Column(db.String(255), nullable=False)\n    diagnosis = db.Column(db.String(255), nullable=True)\n    emergency_contact = db.Column(db.String(100), nullable=False)",
+        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# ログ設定\nlogging.basicConfig(filename='healthcare.log', level=logging.INFO, format='%(asctime)s - %(message)s')\n# **データベースモデル**\nclass CitizenHealth(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    age = db.Column(db.Integer, nullable=False)\n    symptoms = db.Column(db.String(255), nullable=False)\n    medications = db.Column(db.String(255), nullable=False)",
         "detail": "OpenAI.SmartCity.HelthCare.app",
         "documentation": {}
     },

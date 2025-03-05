@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>診断ログ</title>
+</head>
+<body>
+    <h2>診断履歴 & アクションログ</h2>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">戻る</a>
+</body>
+</html>
