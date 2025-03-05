@@ -1,2 +1,12 @@
 2025-03-05 12:14:09,786 -  * Debugger is active!
 2025-03-05 12:14:09,791 -  * Debugger PIN: 822-618-541
+2025-03-05 12:14:21,782 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-05 12:14:21,782 - [33mPress CTRL+C to quit[0m
+2025-03-05 12:14:21,791 -  * Restarting with watchdog (windowsapi)
+2025-03-05 12:14:22,933 -  * Debugger is active!
+2025-03-05 12:14:22,940 -  * Debugger PIN: 822-618-541
+2025-03-05 23:45:11,081 -  * Detected change in 'c:\\Users\\user\\anaconda3\\PythonAI\\KDP\\OpenAI\\SmartCity\\HelthCare\\app.py', reloading
+2025-03-05 23:45:12,232 -  * Restarting with watchdog (windowsapi)
+2025-03-05 23:45:13,512 -  * Debugger is active!
+2025-03-05 23:45:13,518 -  * Debugger PIN: 822-618-541
