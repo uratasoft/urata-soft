@@ -10,3 +10,95 @@
 2025-03-05 23:45:12,232 -  * Restarting with watchdog (windowsapi)
 2025-03-05 23:45:13,512 -  * Debugger is active!
 2025-03-05 23:45:13,518 -  * Debugger PIN: 822-618-541
+2025-03-06 03:56:07,095 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Scripts\\pylint-script.py', reloading
+2025-03-06 03:56:09,249 -  * Restarting with watchdog (windowsapi)
+2025-03-06 03:56:12,292 -  * Debugger is active!
+2025-03-06 03:56:12,303 -  * Debugger PIN: 822-618-541
+2025-03-06 03:56:12,380 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\schedule\\__init__.py', reloading
+2025-03-06 03:56:12,397 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\__init__.py', reloading
+2025-03-06 03:56:12,449 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\openai\\_client.py', reloading
+2025-03-06 03:56:12,474 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\openai\\_base_client.py', reloading
+2025-03-06 03:56:12,574 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2025-03-06 03:56:12,613 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\sansio\\app.py', reloading
+2025-03-06 03:56:12,636 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-03-06 03:56:12,676 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\__init__.py', reloading
+2025-03-06 03:56:12,679 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+2025-03-06 03:56:12,680 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\openai\\_compat.py', reloading
+2025-03-06 03:56:12,694 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\openai\\_models.py', reloading
+2025-03-06 03:56:12,705 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-03-06 03:56:12,711 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-03-06 03:56:12,713 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\__init__.py', reloading
+2025-03-06 03:56:12,724 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\errors.py', reloading
+2025-03-06 03:56:12,733 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-03-06 03:56:12,736 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\main.py', reloading
+2025-03-06 03:56:12,758 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-03-06 03:56:12,768 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\datastructures\\auth.py', reloading
+2025-03-06 03:56:12,789 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\_internal\\_model_construction.py', reloading
+2025-03-06 03:56:12,837 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\http.py', reloading
+2025-03-06 03:56:12,870 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\enum.py', reloading
+2025-03-06 03:56:12,875 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\networks.py', reloading
+2025-03-06 03:56:12,896 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\_internal\\_repr.py', reloading
+2025-03-06 03:56:12,922 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pydantic\\types.py', reloading
+2025-03-06 03:56:13,214 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\datastructures\\cache_control.py', reloading
+2025-03-06 03:56:13,228 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\datastructures\\structures.py', reloading
+2025-03-06 03:56:13,311 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\datastructures\\mixins.py', reloading
+2025-03-06 03:56:13,337 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\collections\\abc.py', reloading
+2025-03-06 03:56:14,584 -  * Restarting with watchdog (windowsapi)
+2025-03-06 03:56:16,699 -  * Debugger is active!
+2025-03-06 03:56:16,710 -  * Debugger PIN: 822-618-541
+2025-03-06 03:56:18,008 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\globals.py', reloading
+2025-03-06 03:56:18,232 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\local.py', reloading
+2025-03-06 03:56:18,306 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\orm\\scoping.py', reloading
+2025-03-06 03:56:18,453 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\orm\\session.py', reloading
+2025-03-06 03:56:18,683 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\orm\\state.py', reloading
+2025-03-06 03:56:19,914 -  * Restarting with watchdog (windowsapi)
+2025-03-06 03:56:22,098 -  * Debugger is active!
+2025-03-06 03:56:22,110 -  * Debugger PIN: 822-618-541
+2025-03-06 03:56:22,332 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\orm\\_typing.py', reloading
+2025-03-06 03:56:22,497 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\orm\\state_changes.py', reloading
+2025-03-06 03:56:22,653 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\engine\\__init__.py', reloading
+2025-03-06 03:56:22,948 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\engine\\util.py', reloading
+2025-03-06 03:56:23,129 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\event\\__init__.py', reloading
+2025-03-06 03:56:24,388 -  * Restarting with watchdog (windowsapi)
+2025-03-06 03:56:26,649 -  * Debugger is active!
+2025-03-06 03:56:26,656 -  * Debugger PIN: 822-618-541
+2025-03-06 03:56:27,575 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\orm\\attributes.py', reloading
+2025-03-06 03:56:28,848 -  * Restarting with watchdog (windowsapi)
+2025-03-06 03:56:30,882 -  * Debugger is active!
+2025-03-06 03:56:30,888 -  * Debugger PIN: 822-618-541
+2025-03-06 08:43:44,322 -  * Detected change in 'C:\\Users\\user\\anaconda3\\cwp.py', reloading
+2025-03-06 08:43:45,740 -  * Restarting with watchdog (windowsapi)
+2025-03-06 08:43:48,137 -  * Debugger is active!
+2025-03-06 08:43:48,146 -  * Debugger PIN: 822-618-541
+2025-03-06 08:56:06,655 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Scripts\\pylint-script.py', reloading
+2025-03-06 08:56:06,867 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\pyparsing\\core.py', reloading
+2025-03-06 08:56:06,931 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\packaging\\markers.py', reloading
+2025-03-06 08:56:08,125 -  * Restarting with watchdog (windowsapi)
+2025-03-06 08:56:09,428 -  * Debugger is active!
+2025-03-06 08:56:09,435 -  * Debugger PIN: 822-618-541
+2025-03-06 08:56:09,574 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\jinja2\\__init__.py', reloading
+2025-03-06 08:56:09,576 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2025-03-06 08:56:09,604 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\zipfile.py', reloading
+2025-03-06 08:56:09,647 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\io.py', reloading
+2025-03-06 08:56:09,734 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\jinja2\\utils.py', reloading
+2025-03-06 08:56:09,779 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+2025-03-06 08:56:09,925 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\ctx.py', reloading
+2025-03-06 08:56:09,939 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\config.py', reloading
+2025-03-06 08:56:09,956 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\routing\\map.py', reloading
+2025-03-06 08:56:09,969 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\routing\\matcher.py', reloading
+2025-03-06 08:56:09,989 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\wrappers.py', reloading
+2025-03-06 08:56:09,995 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-03-06 08:56:10,003 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-03-06 08:56:10,021 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\flask\\sessions.py', reloading
+2025-03-06 08:56:11,253 -  * Restarting with watchdog (windowsapi)
+2025-03-06 08:56:12,484 -  * Debugger is active!
+2025-03-06 08:56:12,491 -  * Debugger PIN: 822-618-541
+2025-03-06 08:56:12,775 -  * Detected change in 'C:\\Users\\user\\anaconda3\\Lib\\site-packages\\sqlalchemy\\sql\\_typing.py', reloading
+2025-03-06 08:56:14,436 -  * Restarting with watchdog (windowsapi)
+2025-03-06 08:56:15,695 -  * Debugger is active!
+2025-03-06 08:56:15,701 -  * Debugger PIN: 822-618-541
+2025-03-06 18:44:38,489 -  * Detected change in 'c:\\Users\\user\\anaconda3\\PythonAI\\KDP\\OpenAI\\SmartCity\\HelthCare\\app.py', reloading
+2025-03-06 18:44:38,490 -  * Detected change in 'C:\\Users\\user\\anaconda3\\PythonAI\\KDP\\OpenAI\\SmartCity\\HelthCare\\app.py', reloading
+2025-03-06 18:44:40,591 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:44:44,457 -  * Debugger is active!
+2025-03-06 18:44:44,490 -  * Debugger PIN: 822-618-541
