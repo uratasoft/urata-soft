@@ -1,10 +1,35 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "openai",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "openai",
         "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
         "detail": "openai",
         "documentation": {}
     },
@@ -208,15 +233,6 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -406,6 +422,33 @@
         "importPath": "tweepy",
         "description": "tweepy",
         "detail": "tweepy",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.chat.completions.ceate",
+        "description": "Method.chat.completions.ceate",
+        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\ncompletion = client.chat.completions.create(\n  model=\"gpt-4o\",\n  messages=[\n    {\"role\": \"developer\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n)\nprint(completion.choices[0].message)",
+        "detail": "Method.chat.completions.ceate",
+        "documentation": {}
+    },
+    {
+        "label": "completion",
+        "kind": 5,
+        "importPath": "Method.chat.completions.ceate",
+        "description": "Method.chat.completions.ceate",
+        "peekOfCode": "completion = client.chat.completions.create(\n  model=\"gpt-4o\",\n  messages=[\n    {\"role\": \"developer\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n)\nprint(completion.choices[0].message)",
+        "detail": "Method.chat.completions.ceate",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.completions.create",
+        "description": "Method.completions.create",
+        "peekOfCode": "client = OpenAI()\nresponse=client.completions.create(\n  model=\"gpt-3.5-turbo-instruct\",\n  prompt=\"Say this is a test\",\n  max_tokens=7,\n  temperature=0\n)\nprint(response.choices[0].text)",
+        "detail": "Method.completions.create",
         "documentation": {}
     },
     {
