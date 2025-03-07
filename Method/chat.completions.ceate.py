@@ -1,3 +1,4 @@
+# チャットモデルを使用して応答を生成する。
 import os
 from openai import OpenAI
 

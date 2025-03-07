@@ -1,3 +1,4 @@
+# 単純なテキスト補完を行う。
 from openai import OpenAI
 client = OpenAI()
 
