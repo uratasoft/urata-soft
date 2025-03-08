@@ -130,6 +130,46 @@
         "documentation": {}
     },
     {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
         "label": "Image",
         "importPath": "PIL",
         "description": "PIL",
@@ -481,11 +521,20 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.audio.transcribe",
+        "description": "Method.audio.transcribe",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\n# 音声ファイルのパスを指定\naudio_file_path = \"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\dakaretai.mp3\"\n# 音声ファイルを開いてAPIに送信\nwith open(audio_file_path, \"rb\") as audio_file:\n    response = client.audio.transcriptions.create(\n        model=\"whisper-1\",\n        file=audio_file,\n        response_format=\"text\"  # 他に \"json\" も選択可能",
+        "detail": "Method.audio.transcribe",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.audio.transcribe",
         "description": "Method.audio.transcribe",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n# 音声ファイルのパスを指定\naudio_file_path = \"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\dakaretai.mp3\"\n# 音声ファイルを開いてAPIに送信\nwith open(audio_file_path, \"rb\") as audio_file:\n    response = client.audio.transcriptions.create(\n        model=\"whisper-1\",\n        file=audio_file,\n        response_format=\"text\"  # 他に \"json\" も選択可能\n    )",
+        "peekOfCode": "client = OpenAI()\n# 音声ファイルのパスを指定\naudio_file_path = \"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\dakaretai.mp3\"\n# 音声ファイルを開いてAPIに送信\nwith open(audio_file_path, \"rb\") as audio_file:\n    response = client.audio.transcriptions.create(\n        model=\"whisper-1\",\n        file=audio_file,\n        response_format=\"text\"  # 他に \"json\" も選択可能\n    )",
         "detail": "Method.audio.transcribe",
         "documentation": {}
     },
@@ -499,11 +548,20 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.chat.completions.ceate",
+        "description": "Method.chat.completions.ceate",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\ncompletion = client.chat.completions.create(\n  model=\"gpt-4o\",\n  messages=[\n    {\"role\": \"developer\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n)\nprint(completion.choices[0].message)",
+        "detail": "Method.chat.completions.ceate",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.chat.completions.ceate",
         "description": "Method.chat.completions.ceate",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\ncompletion = client.chat.completions.create(\n  model=\"gpt-4o\",\n  messages=[\n    {\"role\": \"developer\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n)\nprint(completion.choices[0].message)",
+        "peekOfCode": "client = OpenAI()\ncompletion = client.chat.completions.create(\n  model=\"gpt-4o\",\n  messages=[\n    {\"role\": \"developer\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n)\nprint(completion.choices[0].message)",
         "detail": "Method.chat.completions.ceate",
         "documentation": {}
     },
@@ -514,6 +572,15 @@
         "description": "Method.chat.completions.ceate",
         "peekOfCode": "completion = client.chat.completions.create(\n  model=\"gpt-4o\",\n  messages=[\n    {\"role\": \"developer\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n)\nprint(completion.choices[0].message)",
         "detail": "Method.chat.completions.ceate",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.completions.create",
+        "description": "Method.completions.create",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse=client.completions.create(\n  model=\"gpt-3.5-turbo-instruct\",\n  prompt=\"Say this is a test\",\n  max_tokens=7,\n  temperature=0\n)\nprint(response.choices[0].text)",
+        "detail": "Method.completions.create",
         "documentation": {}
     },
     {
@@ -553,11 +620,20 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.edits.create",
+        "description": "Method.edits.create",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nimage_path = \"input.png\"\nmask_path = \"mask.png\"\nwith open(image_path, \"rb\") as image, open(mask_path, \"rb\") as mask:\n    response = client.images.edit(\n        model=\"dall-e-3\",\n        image=image,\n        mask=mask,\n        prompt=\"都市の背景を夜景に変更してください。\",",
+        "detail": "Method.edits.create",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.edits.create",
         "description": "Method.edits.create",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nimage_path = \"input.png\"\nmask_path = \"mask.png\"\nwith open(image_path, \"rb\") as image, open(mask_path, \"rb\") as mask:\n    response = client.images.edit(\n        model=\"dall-e-3\",\n        image=image,\n        mask=mask,\n        prompt=\"都市の背景を夜景に変更してください。\",\n        n=1,",
+        "peekOfCode": "client = OpenAI()\nimage_path = \"input.png\"\nmask_path = \"mask.png\"\nwith open(image_path, \"rb\") as image, open(mask_path, \"rb\") as mask:\n    response = client.images.edit(\n        model=\"dall-e-3\",\n        image=image,\n        mask=mask,\n        prompt=\"都市の背景を夜景に変更してください。\",\n        n=1,",
         "detail": "Method.edits.create",
         "documentation": {}
     },
@@ -589,11 +665,20 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.embedding.create",
+        "description": "Method.embedding.create",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.embeddings.create(\n    model=\"text-embedding-ada-002\",\n    input=\"スマートシティのメリットとは？\"\n)\n# ベクトルデータを取得\nembedding_vector = response.data[0].embedding\nprint(embedding_vector)\n#print(response)",
+        "detail": "Method.embedding.create",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.embedding.create",
         "description": "Method.embedding.create",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nresponse = client.embeddings.create(\n    model=\"text-embedding-ada-002\",\n    input=\"スマートシティのメリットとは？\"\n)\n# ベクトルデータを取得\nembedding_vector = response.data[0].embedding\nprint(embedding_vector)\n#print(response)",
+        "peekOfCode": "client = OpenAI()\nresponse = client.embeddings.create(\n    model=\"text-embedding-ada-002\",\n    input=\"スマートシティのメリットとは？\"\n)\n# ベクトルデータを取得\nembedding_vector = response.data[0].embedding\nprint(embedding_vector)\n#print(response)",
         "detail": "Method.embedding.create",
         "documentation": {}
     },
@@ -616,11 +701,101 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.files.delete",
+        "description": "Method.files.delete",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nfile_id = \"file-Ad2aQJTLFiSSHGwLkt9C4k\"\nresponse = client.files.delete(file_id)\nprint(f\"ファイル {file_id} の削除結果:\", response.deleted)",
+        "detail": "Method.files.delete",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.files.delete",
+        "description": "Method.files.delete",
+        "peekOfCode": "client = OpenAI()\nfile_id = \"file-Ad2aQJTLFiSSHGwLkt9C4k\"\nresponse = client.files.delete(file_id)\nprint(f\"ファイル {file_id} の削除結果:\", response.deleted)",
+        "detail": "Method.files.delete",
+        "documentation": {}
+    },
+    {
+        "label": "file_id",
+        "kind": 5,
+        "importPath": "Method.files.delete",
+        "description": "Method.files.delete",
+        "peekOfCode": "file_id = \"file-Ad2aQJTLFiSSHGwLkt9C4k\"\nresponse = client.files.delete(file_id)\nprint(f\"ファイル {file_id} の削除結果:\", response.deleted)",
+        "detail": "Method.files.delete",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "Method.files.delete",
+        "description": "Method.files.delete",
+        "peekOfCode": "response = client.files.delete(file_id)\nprint(f\"ファイル {file_id} の削除結果:\", response.deleted)",
+        "detail": "Method.files.delete",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.files.list",
+        "description": "Method.files.list",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.files.list()\nprint(\"ファイル一覧:\", [file.id for file in response.data])",
+        "detail": "Method.files.list",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.files.list",
+        "description": "Method.files.list",
+        "peekOfCode": "client = OpenAI()\nresponse = client.files.list()\nprint(\"ファイル一覧:\", [file.id for file in response.data])",
+        "detail": "Method.files.list",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "Method.files.list",
+        "description": "Method.files.list",
+        "peekOfCode": "response = client.files.list()\nprint(\"ファイル一覧:\", [file.id for file in response.data])",
+        "detail": "Method.files.list",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.files.upload",
+        "description": "Method.files.upload",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nwith open(\"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\test.jsonl\", \"rb\") as file:\n    response = client.files.create(\n        file=file,\n        purpose=\"fine-tune\"\n    )\nprint(\"アップロードされたファイルID:\", response.id)",
+        "detail": "Method.files.upload",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.files.upload",
+        "description": "Method.files.upload",
+        "peekOfCode": "client = OpenAI()\nwith open(\"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\test.jsonl\", \"rb\") as file:\n    response = client.files.create(\n        file=file,\n        purpose=\"fine-tune\"\n    )\nprint(\"アップロードされたファイルID:\", response.id)",
+        "detail": "Method.files.upload",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.image.generate",
+        "description": "Method.image.generate",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.images.generate(\n    model=\"dall-e-3\",\n    prompt=\"2035年千葉県流山市松ヶ丘スマートシティ高層ビル街の街並み、南柏駅も高架線上に存在する、地上40階建てのウラタビルの屋上にウラタとローマ字で書かれている、会社も学校も病院も高層ビルに存在する、ドローンの荷物集配所がある、南西には富士山が見える、30キロ南西にはスカイツリーが見える、自動運転用の高速道路が東京方面に延びている\",\n    size=\"1024x1024\",\n)\nprint(response.data[0].url)",
+        "detail": "Method.image.generate",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.image.generate",
         "description": "Method.image.generate",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nresponse = client.images.generate(\n    model=\"dall-e-3\",\n    prompt=\"2035年千葉県流山市松ヶ丘スマートシティ高層ビル街の街並み、南柏駅も高架線上に存在する、地上40階建てのウラタビルの屋上にウラタとローマ字で書かれている、会社も学校も病院も高層ビルに存在する、ドローンの荷物集配所がある、南西には富士山が見える、30キロ南西にはスカイツリーが見える、自動運転用の高速道路が東京方面に延びている\",\n    size=\"1024x1024\",\n)\nprint(response.data[0].url)",
+        "peekOfCode": "client = OpenAI()\nresponse = client.images.generate(\n    model=\"dall-e-3\",\n    prompt=\"2035年千葉県流山市松ヶ丘スマートシティ高層ビル街の街並み、南柏駅も高架線上に存在する、地上40階建てのウラタビルの屋上にウラタとローマ字で書かれている、会社も学校も病院も高層ビルに存在する、ドローンの荷物集配所がある、南西には富士山が見える、30キロ南西にはスカイツリーが見える、自動運転用の高速道路が東京方面に延びている\",\n    size=\"1024x1024\",\n)\nprint(response.data[0].url)",
         "detail": "Method.image.generate",
         "documentation": {}
     },
@@ -634,11 +809,20 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.images.variations",
+        "description": "Method.images.variations",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nwith open(\"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\T.Urata.JPG\", \"rb\") as image:\n    response = client.images.generate(\n        model=\"dall-e-3\",\n        #image=image, # images.variation用\n        prompt=\"この画像を基本に多少イケメン風にして下さい\",\n        n=1,\n        size=\"1024x1024\"\n    )",
+        "detail": "Method.images.variations",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.images.variations",
         "description": "Method.images.variations",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nwith open(\"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\T.Urata.JPG\", \"rb\") as image:\n    response = client.images.generate(\n        model=\"dall-e-3\",\n        #image=image, # images.variation用\n        prompt=\"この画像を基本に多少イケメン風にして下さい\",\n        n=1,\n        size=\"1024x1024\"\n    )\nimage_url = response.data[0].url",
+        "peekOfCode": "client = OpenAI()\nwith open(\"C:\\\\Users\\\\user\\\\anaconda3\\\\PythonAI\\\\KDP\\\\Method\\\\T.Urata.JPG\", \"rb\") as image:\n    response = client.images.generate(\n        model=\"dall-e-3\",\n        #image=image, # images.variation用\n        prompt=\"この画像を基本に多少イケメン風にして下さい\",\n        n=1,\n        size=\"1024x1024\"\n    )\nimage_url = response.data[0].url",
         "detail": "Method.images.variations",
         "documentation": {}
     },
@@ -652,11 +836,92 @@
         "documentation": {}
     },
     {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.models.list",
+        "description": "Method.models.list",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.models.list()\nprint(\"利用可能なモデル一覧:\", [model.id for model in response.data])",
+        "detail": "Method.models.list",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.models.list",
+        "description": "Method.models.list",
+        "peekOfCode": "client = OpenAI()\nresponse = client.models.list()\nprint(\"利用可能なモデル一覧:\", [model.id for model in response.data])",
+        "detail": "Method.models.list",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "Method.models.list",
+        "description": "Method.models.list",
+        "peekOfCode": "response = client.models.list()\nprint(\"利用可能なモデル一覧:\", [model.id for model in response.data])",
+        "detail": "Method.models.list",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.models.retrieve",
+        "description": "Method.models.retrieve",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.models.retrieve(\"gpt-4-turbo\")\nprint(\"GPT-4 Turboの詳細情報:\", response)",
+        "detail": "Method.models.retrieve",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.models.retrieve",
+        "description": "Method.models.retrieve",
+        "peekOfCode": "client = OpenAI()\nresponse = client.models.retrieve(\"gpt-4-turbo\")\nprint(\"GPT-4 Turboの詳細情報:\", response)",
+        "detail": "Method.models.retrieve",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "Method.models.retrieve",
+        "description": "Method.models.retrieve",
+        "peekOfCode": "response = client.models.retrieve(\"gpt-4-turbo\")\nprint(\"GPT-4 Turboの詳細情報:\", response)",
+        "detail": "Method.models.retrieve",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.moderation.create",
+        "description": "Method.moderation.create",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()from openai import OpenAI\n#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.moderations.create(\n    model=\"text-moderation-latest\",\n    input=\"殺人クラブ\"\n)\n# テキストが危険かどうかを判定\nis_flagged = response.results[0].flagged",
+        "detail": "Method.moderation.create",
+        "documentation": {}
+    },
+    {
         "label": "client",
         "kind": 5,
         "importPath": "Method.moderation.create",
         "description": "Method.moderation.create",
-        "peekOfCode": "client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nresponse = client.moderations.create(\n    model=\"text-moderation-latest\",\n    input=\"殺人クラブ\"\n)\n# テキストが危険かどうかを判定\nis_flagged = response.results[0].flagged\nprint(f\"このテキストは危険か？: {is_flagged}\")",
+        "peekOfCode": "client = OpenAI()from openai import OpenAI\n#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.moderations.create(\n    model=\"text-moderation-latest\",\n    input=\"殺人クラブ\"\n)\n# テキストが危険かどうかを判定\nis_flagged = response.results[0].flagged\nprint(f\"このテキストは危険か？: {is_flagged}\")",
+        "detail": "Method.moderation.create",
+        "documentation": {}
+    },
+    {
+        "label": "#client",
+        "kind": 5,
+        "importPath": "Method.moderation.create",
+        "description": "Method.moderation.create",
+        "peekOfCode": "#client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\nclient = OpenAI()\nresponse = client.moderations.create(\n    model=\"text-moderation-latest\",\n    input=\"殺人クラブ\"\n)\n# テキストが危険かどうかを判定\nis_flagged = response.results[0].flagged\nprint(f\"このテキストは危険か？: {is_flagged}\")",
+        "detail": "Method.moderation.create",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Method.moderation.create",
+        "description": "Method.moderation.create",
+        "peekOfCode": "client = OpenAI()\nresponse = client.moderations.create(\n    model=\"text-moderation-latest\",\n    input=\"殺人クラブ\"\n)\n# テキストが危険かどうかを判定\nis_flagged = response.results[0].flagged\nprint(f\"このテキストは危険か？: {is_flagged}\")",
         "detail": "Method.moderation.create",
         "documentation": {}
     },
