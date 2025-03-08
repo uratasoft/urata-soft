@@ -17,3 +17,4 @@ with open(audio_file_path, "rb") as audio_file:
 
 # 文字起こし結果を表示
 print(response)
+print("Audio Transcriptionの結果:", response.text.strip())
