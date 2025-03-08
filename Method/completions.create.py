@@ -1,5 +1,7 @@
 # 単純なテキスト補完を行う。
 from openai import OpenAI
+
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 client = OpenAI()
 
 response=client.completions.create(

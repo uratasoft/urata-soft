@@ -1,7 +1,9 @@
 # テキストから画像を生成する
 import os
 from openai import OpenAI
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI()
 
 response = client.images.generate(
     model="dall-e-3",
