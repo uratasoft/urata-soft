@@ -9,6 +9,135 @@
         "documentation": {}
     },
     {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "openai",
         "kind": 6,
         "isExtraImport": true,
@@ -347,110 +476,6 @@
         "documentation": {}
     },
     {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "jsonify",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
         "label": "SQLAlchemy",
         "importPath": "flask_sqlalchemy",
         "description": "flask_sqlalchemy",
@@ -485,15 +510,6 @@
         "documentation": {}
     },
     {
-        "label": "requests",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
         "label": "gpt_api",
         "kind": 6,
         "isExtraImport": true,
@@ -518,6 +534,42 @@
         "importPath": "tweepy",
         "description": "tweepy",
         "detail": "tweepy",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "facebook-chatbot.app",
+        "description": "facebook-chatbot.app",
+        "peekOfCode": "def home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    print(f\"🔍 GETリクエスト受信: mode={mode}, token={token}, challenge={challenge}\")",
+        "detail": "facebook-chatbot.app",
+        "documentation": {}
+    },
+    {
+        "label": "verify",
+        "kind": 2,
+        "importPath": "facebook-chatbot.app",
+        "description": "facebook-chatbot.app",
+        "peekOfCode": "def verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    print(f\"🔍 GETリクエスト受信: mode={mode}, token={token}, challenge={challenge}\")\n    if mode == \"subscribe\" and token == VERIFY_TOKEN:\n        print(\"✅ Webhook Verified!\")\n        return challenge, 200\n    else:",
+        "detail": "facebook-chatbot.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "facebook-chatbot.app",
+        "description": "facebook-chatbot.app",
+        "peekOfCode": "app = Flask(__name__)\n# ✅ Webhook の検証トークン（Facebook の設定と一致させる）\nVERIFY_TOKEN = \"f8a44060698b8f383f4f0c6c5c9d83b8\"\n@app.route(\"/\", methods=[\"GET\"])\ndef home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"",
+        "detail": "facebook-chatbot.app",
+        "documentation": {}
+    },
+    {
+        "label": "VERIFY_TOKEN",
+        "kind": 5,
+        "importPath": "facebook-chatbot.app",
+        "description": "facebook-chatbot.app",
+        "peekOfCode": "VERIFY_TOKEN = \"f8a44060698b8f383f4f0c6c5c9d83b8\"\n@app.route(\"/\", methods=[\"GET\"])\ndef home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")",
+        "detail": "facebook-chatbot.app",
         "documentation": {}
     },
     {
