@@ -1,20 +1,27 @@
 [
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
         "documentation": {}
     },
     {
@@ -135,6 +142,15 @@
         "description": "flask",
         "isExtraImport": true,
         "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -537,20 +553,29 @@
         "documentation": {}
     },
     {
-        "label": "home",
+        "label": "send_message",
         "kind": 2,
         "importPath": "facebook-chatbot.app",
         "description": "facebook-chatbot.app",
-        "peekOfCode": "def home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    print(f\"🔍 GETリクエスト受信: mode={mode}, token={token}, challenge={challenge}\")",
+        "peekOfCode": "def send_message(recipient_id, text):\n    \"\"\"Facebook Messenger に自動返信を送る\"\"\"\n    url = f\"https://graph.facebook.com/v19.0/me/messages?access_token={PAGE_ACCESS_TOKEN}\"\n    headers = {\"Content-Type\": \"application/json\"}\n    payload = {\n        \"recipient\": {\"id\": recipient_id},\n        \"message\": {\"text\": text}\n    }\n    response = requests.post(url, json=payload, headers=headers)\n    print(\"📩 送信結果:\", response.status_code, response.text)  # デバッグ用に送信結果を表示",
         "detail": "facebook-chatbot.app",
         "documentation": {}
     },
     {
-        "label": "verify",
+        "label": "verify_webhook",
         "kind": 2,
         "importPath": "facebook-chatbot.app",
         "description": "facebook-chatbot.app",
-        "peekOfCode": "def verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    print(f\"🔍 GETリクエスト受信: mode={mode}, token={token}, challenge={challenge}\")\n    if mode == \"subscribe\" and token == VERIFY_TOKEN:\n        print(\"✅ Webhook Verified!\")\n        return challenge, 200\n    else:",
+        "peekOfCode": "def verify_webhook():\n    \"\"\"Facebook Webhook の認証処理\"\"\"\n    VERIFY_TOKEN = \"1403ad4e4d93d83d317b3a6fbe5d14f1\"  # ここに Webhook の検証トークンを設定\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    if mode == \"subscribe\" and token == VERIFY_TOKEN:\n        print(\"✅ Webhook Verified!\")  # Webhook 認証成功\n        return challenge, 200\n    else:",
+        "detail": "facebook-chatbot.app",
+        "documentation": {}
+    },
+    {
+        "label": "webhook",
+        "kind": 2,
+        "importPath": "facebook-chatbot.app",
+        "description": "facebook-chatbot.app",
+        "peekOfCode": "def webhook():\n    \"\"\"Facebook Messenger からのメッセージ受信処理\"\"\"\n    data = request.get_json()\n    # 🔹 メッセージが送られた場合の処理\n    messaging_event = data.get(\"entry\", [{}])[0].get(\"messaging\", [{}])[0]\n    sender_id = messaging_event.get(\"sender\", {}).get(\"id\")  # 送信者のID\n    message_text = messaging_event.get(\"message\", {}).get(\"text\", \"\")\n    if sender_id and message_text:\n        print(f\"📩 受信: {sender_id} から「{message_text}」\")\n        send_message(sender_id, f\"あなたのメッセージ: 「{message_text}」 を受け取りました！\")  # 自動返信",
         "detail": "facebook-chatbot.app",
         "documentation": {}
     },
@@ -559,17 +584,53 @@
         "kind": 5,
         "importPath": "facebook-chatbot.app",
         "description": "facebook-chatbot.app",
-        "peekOfCode": "app = Flask(__name__)\n# ✅ Webhook の検証トークン（Facebook の設定と一致させる）\nVERIFY_TOKEN = \"f8a44060698b8f383f4f0c6c5c9d83b8\"\n@app.route(\"/\", methods=[\"GET\"])\ndef home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"",
+        "peekOfCode": "app = Flask(__name__)\n# 🔹 Facebook の「ページアクセストークン」を設定（あなたのものに置き換えてください！）\nPAGE_ACCESS_TOKEN = \"EAAOhc6h5nBABOxTTixCeGLdvZBvU7ckBUJSIVwlBfmSZAfeonLm9y0NfoFrDArahJNZCm47JgiBrdIyRebdYlwckZCMRoPx4ZA2gvzOClsJ5GZCBZAjWAmYEshRje4SF3vx4BpR91qPDdHsOu3CHeWUijuRGXex8yXZAgsdEjBi3VqGdTsCXAK6D7A5ZCs8qxsSoO1GtAQK1OMp4LguRZBK9gxCnZAnGR34uEBF3aAKtnehDQYZD\"  # ここにあなたのページアクセストークンを入力\ndef send_message(recipient_id, text):\n    \"\"\"Facebook Messenger に自動返信を送る\"\"\"\n    url = f\"https://graph.facebook.com/v19.0/me/messages?access_token={PAGE_ACCESS_TOKEN}\"\n    headers = {\"Content-Type\": \"application/json\"}\n    payload = {\n        \"recipient\": {\"id\": recipient_id},\n        \"message\": {\"text\": text}",
         "detail": "facebook-chatbot.app",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_ACCESS_TOKEN",
+        "kind": 5,
+        "importPath": "facebook-chatbot.app",
+        "description": "facebook-chatbot.app",
+        "peekOfCode": "PAGE_ACCESS_TOKEN = \"EAAOhc6h5nBABOxTTixCeGLdvZBvU7ckBUJSIVwlBfmSZAfeonLm9y0NfoFrDArahJNZCm47JgiBrdIyRebdYlwckZCMRoPx4ZA2gvzOClsJ5GZCBZAjWAmYEshRje4SF3vx4BpR91qPDdHsOu3CHeWUijuRGXex8yXZAgsdEjBi3VqGdTsCXAK6D7A5ZCs8qxsSoO1GtAQK1OMp4LguRZBK9gxCnZAnGR34uEBF3aAKtnehDQYZD\"  # ここにあなたのページアクセストークンを入力\ndef send_message(recipient_id, text):\n    \"\"\"Facebook Messenger に自動返信を送る\"\"\"\n    url = f\"https://graph.facebook.com/v19.0/me/messages?access_token={PAGE_ACCESS_TOKEN}\"\n    headers = {\"Content-Type\": \"application/json\"}\n    payload = {\n        \"recipient\": {\"id\": recipient_id},\n        \"message\": {\"text\": text}\n    }\n    response = requests.post(url, json=payload, headers=headers)",
+        "detail": "facebook-chatbot.app",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "facebook-chatbot.app_b",
+        "description": "facebook-chatbot.app_b",
+        "peekOfCode": "def home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    print(f\"🔍 GETリクエスト受信: mode={mode}, token={token}, challenge={challenge}\")",
+        "detail": "facebook-chatbot.app_b",
+        "documentation": {}
+    },
+    {
+        "label": "verify",
+        "kind": 2,
+        "importPath": "facebook-chatbot.app_b",
+        "description": "facebook-chatbot.app_b",
+        "peekOfCode": "def verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")\n    challenge = request.args.get(\"hub.challenge\")\n    print(f\"🔍 GETリクエスト受信: mode={mode}, token={token}, challenge={challenge}\")\n    if mode == \"subscribe\" and token == VERIFY_TOKEN:\n        print(\"✅ Webhook Verified!\")\n        return challenge, 200\n    else:",
+        "detail": "facebook-chatbot.app_b",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "facebook-chatbot.app_b",
+        "description": "facebook-chatbot.app_b",
+        "peekOfCode": "app = Flask(__name__)\n# ✅ Webhook の検証トークン（Facebook の設定と一致させる）\nVERIFY_TOKEN = \"1403ad4e4d93d83d317b3a6fbe5d14f1\"\n@app.route(\"/\", methods=[\"GET\"])\ndef home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"",
+        "detail": "facebook-chatbot.app_b",
         "documentation": {}
     },
     {
         "label": "VERIFY_TOKEN",
         "kind": 5,
-        "importPath": "facebook-chatbot.app",
-        "description": "facebook-chatbot.app",
-        "peekOfCode": "VERIFY_TOKEN = \"f8a44060698b8f383f4f0c6c5c9d83b8\"\n@app.route(\"/\", methods=[\"GET\"])\ndef home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")",
-        "detail": "facebook-chatbot.app",
+        "importPath": "facebook-chatbot.app_b",
+        "description": "facebook-chatbot.app_b",
+        "peekOfCode": "VERIFY_TOKEN = \"1403ad4e4d93d83d317b3a6fbe5d14f1\"\n@app.route(\"/\", methods=[\"GET\"])\ndef home():\n    \"\"\"Flask の動作確認用エンドポイント\"\"\"\n    return \"Flask is running!\", 200\n@app.route(\"/webhook\", methods=[\"GET\"])\ndef verify():\n    \"\"\"Facebook Webhook の検証用エンドポイント\"\"\"\n    mode = request.args.get(\"hub.mode\")\n    token = request.args.get(\"hub.verify_token\")",
+        "detail": "facebook-chatbot.app_b",
         "documentation": {}
     },
     {
