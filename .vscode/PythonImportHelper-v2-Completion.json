@@ -1694,5 +1694,14 @@
         "peekOfCode": "bearerToken = os.environ[\"TWITTER_BEARER_TOKEN\"]\n# Xに投稿する関数を定義\ndef post(tweet):\n    #tweepy クライアントを作成\n    client = tweepy.Client(\n        bearerToken,\n        consumerKey,\n        consumerSecret,\n        accessToken,\n        accessTokenSecret",
         "detail": "OpenAI.TweetAPI.twitter_api",
         "documentation": {}
+    },
+    {
+        "label": "chatWithGPT",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def chatWithGPT(user_message):\n    # ChatGPTへのリクエスト処理を関数化\n    response = requests.post(...)\n    return response.json()[\"choices\"][0][\"message\"][\"content\"]",
+        "detail": "test",
+        "documentation": {}
     }
 ]
