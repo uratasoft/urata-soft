@@ -1,6 +1,8 @@
 import os
+import json
+import requests
+import winsound
 import speech_recognition as sr
-import pyttsx3
 from openai import OpenAI
 
 # 音声を録音してテキストに変換
@@ -23,12 +25,32 @@ def ask_chatgpt(text):
     )
     return response.choices[0].message.content
 
-# AIの返事を声に出す
-def speak(text):
-    engine = pyttsx3.init()
-    engine.setProperty('rate', 150)
-    engine.say(text)
-    engine.runAndWait()
+# AIの返事をVOICEVOX（ずんだもん）で話す
+def speak(text, speaker=1):  # speaker=1 = ずんだもん
+    try:
+        # 音声合成用クエリ生成
+        query = requests.post(
+            "http://127.0.0.1:50021/audio_query",
+            params={"text": text, "speaker": speaker}
+        ).json()
+
+        # 音声合成の実行
+        synthesis = requests.post(
+            "http://127.0.0.1:50021/synthesis",
+            headers={"Content-Type": "application/json"},
+            params={"speaker": speaker},
+            data=json.dumps(query)
+        )
+
+        # 音声をファイルに保存
+        with open("voicevox_output.wav", "wb") as f:
+            f.write(synthesis.content)
+
+        # GUIなしで再生
+        winsound.PlaySound("voicevox_output.wav", winsound.SND_FILENAME)
+
+    except Exception as e:
+        print("VOICEVOXでエラーが発生しました：", e)
 
 # すべてをつなげる
 def talk_with_bot():

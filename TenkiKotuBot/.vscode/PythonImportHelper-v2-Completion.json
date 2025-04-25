@@ -42,29 +42,12 @@
         "documentation": {}
     },
     {
-        "label": "OpenAI",
-        "importPath": "openai",
-        "description": "openai",
-        "isExtraImport": true,
-        "detail": "openai",
-        "documentation": {}
-    },
-    {
-        "label": "speech_recognition",
+        "label": "json",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "speech_recognition",
-        "description": "speech_recognition",
-        "detail": "speech_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "pyttsx3",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pyttsx3",
-        "description": "pyttsx3",
-        "detail": "pyttsx3",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -86,12 +69,12 @@
         "documentation": {}
     },
     {
-        "label": "json",
+        "label": "speech_recognition",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
         "documentation": {}
     },
     {
@@ -117,7 +100,7 @@
         "kind": 2,
         "importPath": "chat_voice_bot",
         "description": "chat_voice_bot",
-        "peekOfCode": "def ask_chatgpt(text):\n    client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        messages=[{\"role\": \"user\", \"content\": text}]\n    )\n    return response.choices[0].message.content\n# AIの返事を声に出す\ndef speak(text):\n    engine = pyttsx3.init()",
+        "peekOfCode": "def ask_chatgpt(text):\n    client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        messages=[{\"role\": \"user\", \"content\": text}]\n    )\n    return response.choices[0].message.content\n# AIの返事をVOICEVOX（ずんだもん）で話す\ndef speak(text, speaker=1):  # speaker=1 = ずんだもん\n    try:",
         "detail": "chat_voice_bot",
         "documentation": {}
     },
@@ -126,7 +109,7 @@
         "kind": 2,
         "importPath": "chat_voice_bot",
         "description": "chat_voice_bot",
-        "peekOfCode": "def speak(text):\n    engine = pyttsx3.init()\n    engine.setProperty('rate', 150)\n    engine.say(text)\n    engine.runAndWait()\n# すべてをつなげる\ndef talk_with_bot():\n    question = listen()\n    print(\"あなた：\", question)\n    answer = ask_chatgpt(question)",
+        "peekOfCode": "def speak(text, speaker=1):  # speaker=1 = ずんだもん\n    try:\n        # 音声合成用クエリ生成\n        query = requests.post(\n            \"http://127.0.0.1:50021/audio_query\",\n            params={\"text\": text, \"speaker\": speaker}\n        ).json()\n        # 音声合成の実行\n        synthesis = requests.post(\n            \"http://127.0.0.1:50021/synthesis\",",
         "detail": "chat_voice_bot",
         "documentation": {}
     },
@@ -137,42 +120,6 @@
         "description": "chat_voice_bot",
         "peekOfCode": "def talk_with_bot():\n    question = listen()\n    print(\"あなた：\", question)\n    answer = ask_chatgpt(question)\n    print(\"Bot：\", answer)\n    speak(answer)\nif __name__ == \"__main__\":\n    talk_with_bot()",
         "detail": "chat_voice_bot",
-        "documentation": {}
-    },
-    {
-        "label": "listen",
-        "kind": 2,
-        "importPath": "chat_voice_bot_zunda",
-        "description": "chat_voice_bot_zunda",
-        "peekOfCode": "def listen():\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"質問をどうぞ！\")\n        audio = recognizer.listen(source)\n    try:\n        return recognizer.recognize_google(audio, language=\"ja-JP\")\n    except:\n        return \"すみません、うまく聞き取れませんでした。\"\n# ChatGPTに送信して返事をもらう",
-        "detail": "chat_voice_bot_zunda",
-        "documentation": {}
-    },
-    {
-        "label": "ask_chatgpt",
-        "kind": 2,
-        "importPath": "chat_voice_bot_zunda",
-        "description": "chat_voice_bot_zunda",
-        "peekOfCode": "def ask_chatgpt(text):\n    client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        messages=[{\"role\": \"user\", \"content\": text}]\n    )\n    return response.choices[0].message.content\n# AIの返事をVOICEVOXでしゃべらせる\ndef speak(text, speaker=1):  # speaker=1 は「ずんだもん」\n    try:",
-        "detail": "chat_voice_bot_zunda",
-        "documentation": {}
-    },
-    {
-        "label": "speak",
-        "kind": 2,
-        "importPath": "chat_voice_bot_zunda",
-        "description": "chat_voice_bot_zunda",
-        "peekOfCode": "def speak(text, speaker=1):  # speaker=1 は「ずんだもん」\n    try:\n        query = requests.post(\n            \"http://127.0.0.1:50021/audio_query\",\n            params={\"text\": text, \"speaker\": speaker}\n        ).json()\n        synthesis = requests.post(\n            \"http://127.0.0.1:50021/synthesis\",\n            headers={\"Content-Type\": \"application/json\"},\n            params={\"speaker\": speaker},",
-        "detail": "chat_voice_bot_zunda",
-        "documentation": {}
-    },
-    {
-        "label": "talk_with_bot",
-        "kind": 2,
-        "importPath": "chat_voice_bot_zunda",
-        "description": "chat_voice_bot_zunda",
-        "peekOfCode": "def talk_with_bot():\n    question = listen()\n    print(\"あなた：\", question)\n    answer = ask_chatgpt(question)\n    print(\"Bot：\", answer)\n    speak(answer)\nif __name__ == \"__main__\":\n    talk_with_bot()",
-        "detail": "chat_voice_bot_zunda",
         "documentation": {}
     },
     {
@@ -187,19 +134,10 @@
     {
         "label": "speak",
         "kind": 2,
-        "importPath": "speak_pyttsx3",
-        "description": "speak_pyttsx3",
-        "peekOfCode": "def speak(text):\n    engine = pyttsx3.init()\n    engine.setProperty('rate', 150)  # 話す速さを調整\n    engine.say(text)\n    engine.runAndWait()\nif __name__ == \"__main__\":\n    speak(\"こんにちは！今日はどんなお手伝いをしましょうか？\")",
-        "detail": "speak_pyttsx3",
-        "documentation": {}
-    },
-    {
-        "label": "speak_with_voicevox",
-        "kind": 2,
-        "importPath": "speak_voicevox",
-        "description": "speak_voicevox",
-        "peekOfCode": "def speak_with_voicevox(text, speaker=1):  # speaker=1 は「ずんだもん」\n    # クエリ生成\n    query = requests.post(\n        \"http://127.0.0.1:50021/audio_query\",\n        params={\"text\": text, \"speaker\": speaker}\n    ).json()\n    # 音声合成\n    audio = requests.post(\n        \"http://127.0.0.1:50021/synthesis\",\n        headers={\"Content-Type\": \"application/json\"},",
-        "detail": "speak_voicevox",
+        "importPath": "speak",
+        "description": "speak",
+        "peekOfCode": "def speak(text, speaker=1):  # speaker=1 → ずんだもん\n    # VOICEVOXエンジンが起動している必要があります！\n    # クエリ作成\n    query = requests.post(\n        \"http://127.0.0.1:50021/audio_query\",\n        params={\"text\": text, \"speaker\": speaker}\n    ).json()\n    # 音声合成\n    synthesis = requests.post(\n        \"http://127.0.0.1:50021/synthesis\",",
+        "detail": "speak",
         "documentation": {}
     },
     {

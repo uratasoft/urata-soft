@@ -1,6 +1,5 @@
 import speech_recognition as sr
 
-
 def listen():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -15,7 +14,6 @@ def listen():
         print("うまく聞き取れませんでした。もう一度話してみてください。")
     except sr.RequestError:
         print("音声認識サービスに接続できませんでした。")
-
 
 if __name__ == "__main__":
     listen()
