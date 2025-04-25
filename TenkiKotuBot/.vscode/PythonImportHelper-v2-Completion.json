@@ -1,0 +1,259 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "openai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openai",
+        "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "speech_recognition",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "winsound",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "winsound",
+        "description": "winsound",
+        "detail": "winsound",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "get_chatgpt",
+        "kind": 2,
+        "importPath": "chat_test",
+        "description": "chat_test",
+        "peekOfCode": "def get_chatgpt(): #ChatGPTの応答を得る関数\n    client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\")) #環境変数からAPIきーを取得\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        messages=[{\"role\": \"user\", \"content\": \"こんにちは\"}] #プロンプトを設定\n    )\n    print(response.choices[0].message.content)\nif __name__ == \"__main__\":\n    get_chatgpt()",
+        "detail": "chat_test",
+        "documentation": {}
+    },
+    {
+        "label": "listen",
+        "kind": 2,
+        "importPath": "chat_voice_bot",
+        "description": "chat_voice_bot",
+        "peekOfCode": "def listen():\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"質問をどうぞ！\")\n        audio = recognizer.listen(source)\n    try:\n        return recognizer.recognize_google(audio, language=\"ja-JP\")\n    except:\n        return \"すみません、うまく聞き取れませんでした。\"\n# ChatGPTに送信して返事をもらう",
+        "detail": "chat_voice_bot",
+        "documentation": {}
+    },
+    {
+        "label": "ask_chatgpt",
+        "kind": 2,
+        "importPath": "chat_voice_bot",
+        "description": "chat_voice_bot",
+        "peekOfCode": "def ask_chatgpt(text):\n    client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        messages=[{\"role\": \"user\", \"content\": text}]\n    )\n    return response.choices[0].message.content\n# AIの返事を声に出す\ndef speak(text):\n    engine = pyttsx3.init()",
+        "detail": "chat_voice_bot",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "chat_voice_bot",
+        "description": "chat_voice_bot",
+        "peekOfCode": "def speak(text):\n    engine = pyttsx3.init()\n    engine.setProperty('rate', 150)\n    engine.say(text)\n    engine.runAndWait()\n# すべてをつなげる\ndef talk_with_bot():\n    question = listen()\n    print(\"あなた：\", question)\n    answer = ask_chatgpt(question)",
+        "detail": "chat_voice_bot",
+        "documentation": {}
+    },
+    {
+        "label": "talk_with_bot",
+        "kind": 2,
+        "importPath": "chat_voice_bot",
+        "description": "chat_voice_bot",
+        "peekOfCode": "def talk_with_bot():\n    question = listen()\n    print(\"あなた：\", question)\n    answer = ask_chatgpt(question)\n    print(\"Bot：\", answer)\n    speak(answer)\nif __name__ == \"__main__\":\n    talk_with_bot()",
+        "detail": "chat_voice_bot",
+        "documentation": {}
+    },
+    {
+        "label": "listen",
+        "kind": 2,
+        "importPath": "chat_voice_bot_zunda",
+        "description": "chat_voice_bot_zunda",
+        "peekOfCode": "def listen():\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"質問をどうぞ！\")\n        audio = recognizer.listen(source)\n    try:\n        return recognizer.recognize_google(audio, language=\"ja-JP\")\n    except:\n        return \"すみません、うまく聞き取れませんでした。\"\n# ChatGPTに送信して返事をもらう",
+        "detail": "chat_voice_bot_zunda",
+        "documentation": {}
+    },
+    {
+        "label": "ask_chatgpt",
+        "kind": 2,
+        "importPath": "chat_voice_bot_zunda",
+        "description": "chat_voice_bot_zunda",
+        "peekOfCode": "def ask_chatgpt(text):\n    client = OpenAI(api_key=os.getenv(\"OPENAI_API_KEY\"))\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        messages=[{\"role\": \"user\", \"content\": text}]\n    )\n    return response.choices[0].message.content\n# AIの返事をVOICEVOXでしゃべらせる\ndef speak(text, speaker=1):  # speaker=1 は「ずんだもん」\n    try:",
+        "detail": "chat_voice_bot_zunda",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "chat_voice_bot_zunda",
+        "description": "chat_voice_bot_zunda",
+        "peekOfCode": "def speak(text, speaker=1):  # speaker=1 は「ずんだもん」\n    try:\n        query = requests.post(\n            \"http://127.0.0.1:50021/audio_query\",\n            params={\"text\": text, \"speaker\": speaker}\n        ).json()\n        synthesis = requests.post(\n            \"http://127.0.0.1:50021/synthesis\",\n            headers={\"Content-Type\": \"application/json\"},\n            params={\"speaker\": speaker},",
+        "detail": "chat_voice_bot_zunda",
+        "documentation": {}
+    },
+    {
+        "label": "talk_with_bot",
+        "kind": 2,
+        "importPath": "chat_voice_bot_zunda",
+        "description": "chat_voice_bot_zunda",
+        "peekOfCode": "def talk_with_bot():\n    question = listen()\n    print(\"あなた：\", question)\n    answer = ask_chatgpt(question)\n    print(\"Bot：\", answer)\n    speak(answer)\nif __name__ == \"__main__\":\n    talk_with_bot()",
+        "detail": "chat_voice_bot_zunda",
+        "documentation": {}
+    },
+    {
+        "label": "listen",
+        "kind": 2,
+        "importPath": "listen_voice",
+        "description": "listen_voice",
+        "peekOfCode": "def listen():\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"話しかけてください…\")\n        audio = recognizer.listen(source)\n    try:\n        text = recognizer.recognize_google(audio, language=\"ja-JP\")\n        print(\"あなたが言ったこと：\", text)\n        return text\n    except sr.UnknownValueError:",
+        "detail": "listen_voice",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "speak_pyttsx3",
+        "description": "speak_pyttsx3",
+        "peekOfCode": "def speak(text):\n    engine = pyttsx3.init()\n    engine.setProperty('rate', 150)  # 話す速さを調整\n    engine.say(text)\n    engine.runAndWait()\nif __name__ == \"__main__\":\n    speak(\"こんにちは！今日はどんなお手伝いをしましょうか？\")",
+        "detail": "speak_pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "speak_with_voicevox",
+        "kind": 2,
+        "importPath": "speak_voicevox",
+        "description": "speak_voicevox",
+        "peekOfCode": "def speak_with_voicevox(text, speaker=1):  # speaker=1 は「ずんだもん」\n    # クエリ生成\n    query = requests.post(\n        \"http://127.0.0.1:50021/audio_query\",\n        params={\"text\": text, \"speaker\": speaker}\n    ).json()\n    # 音声合成\n    audio = requests.post(\n        \"http://127.0.0.1:50021/synthesis\",\n        headers={\"Content-Type\": \"application/json\"},",
+        "detail": "speak_voicevox",
+        "documentation": {}
+    },
+    {
+        "label": "get_weather",
+        "kind": 2,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "def get_weather(city):\n    url = \"http://api.openweathermap.org/data/2.5/weather\"\n    params = {\"q\": city, \"appid\": WEATHER_API, \"lang\": \"ja\", \"units\": \"metric\"}\n    res = requests.get(url, params=params)\n    if res.status_code == 200:\n        data = res.json()\n        desc = data[\"weather\"][0][\"description\"]\n        temp = data[\"main\"][\"temp\"]\n        return f\"{city}の天気は「{desc}」、気温は{temp}℃です。\"\n    return \"天気情報の取得に失敗しました。\"",
+        "detail": "weather",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "kind": 2,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "def build_prompt(weather_info):\n    prompt = (\n        \"あなたは社長にとって可愛い秘書です。以下の天気情報をもとに、出発前のアドバイスを丁寧に作成してください。\\n\"\n        #\"\\n\"\n        f\"最初に{city}近辺のロケーションを説明して\\n\"\n        \"【条件】\\n\"\n        \"- 雨なら、傘を持ってってね！」と促す\\n\"\n        \"- 曇りなら、服装の注意を軽く入れる\\n\"\n        \"- 晴れなら、気持ちの良い一日をと激励する\\n\"\n        \"- 寒いなら、厚着の方が良いとアドバイス\\n\"",
+        "detail": "weather",
+        "documentation": {}
+    },
+    {
+        "label": "get_advice",
+        "kind": 2,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "def get_advice():\n    weather_info = get_weather(city)\n    prompt = build_prompt(weather_info)\n    response = client.chat.completions.create(\n        model=\"gpt-3.5-turbo\",\n        #model=\"gpt-4-turbo\",\n        messages=[{\"role\": \"user\", \"content\": prompt}],\n        temperature=0.7,\n    )\n    return response.choices[0].message.content.strip()",
+        "detail": "weather",
+        "documentation": {}
+    },
+    {
+        "label": "WEATHER_API",
+        "kind": 5,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "WEATHER_API = os.getenv(\"WEATHER_API\")\nOPENAI_API_KEY = os.getenv(\"OPENAI_API_KEY\")\ncity=\"流山市\"\n# ==== OpenAIクライアント初期化 ====\nclient = OpenAI(api_key=OPENAI_API_KEY)\n# ==== 天気取得 ====\ndef get_weather(city):\n    url = \"http://api.openweathermap.org/data/2.5/weather\"\n    params = {\"q\": city, \"appid\": WEATHER_API, \"lang\": \"ja\", \"units\": \"metric\"}\n    res = requests.get(url, params=params)",
+        "detail": "weather",
+        "documentation": {}
+    },
+    {
+        "label": "OPENAI_API_KEY",
+        "kind": 5,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "OPENAI_API_KEY = os.getenv(\"OPENAI_API_KEY\")\ncity=\"流山市\"\n# ==== OpenAIクライアント初期化 ====\nclient = OpenAI(api_key=OPENAI_API_KEY)\n# ==== 天気取得 ====\ndef get_weather(city):\n    url = \"http://api.openweathermap.org/data/2.5/weather\"\n    params = {\"q\": city, \"appid\": WEATHER_API, \"lang\": \"ja\", \"units\": \"metric\"}\n    res = requests.get(url, params=params)\n    if res.status_code == 200:",
+        "detail": "weather",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "client = OpenAI(api_key=OPENAI_API_KEY)\n# ==== 天気取得 ====\ndef get_weather(city):\n    url = \"http://api.openweathermap.org/data/2.5/weather\"\n    params = {\"q\": city, \"appid\": WEATHER_API, \"lang\": \"ja\", \"units\": \"metric\"}\n    res = requests.get(url, params=params)\n    if res.status_code == 200:\n        data = res.json()\n        desc = data[\"weather\"][0][\"description\"]\n        temp = data[\"main\"][\"temp\"]",
+        "detail": "weather",
+        "documentation": {}
+    }
+]
